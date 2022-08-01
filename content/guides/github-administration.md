@@ -1,5 +1,10 @@
 # GitHub Administration
 
+## Prerequisites
+
+- Familiarity with GitHub, repositories, and the basics of managing individual accounts is required
+- Familiarity with personal and organizational authentication technologies and processes would be helpful
+
 ## Skills measured
 
 - Support GitHub Enterprise for users and key stakeholders (15%) - Approx 10 Questions
