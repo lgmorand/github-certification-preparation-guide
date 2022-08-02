@@ -275,9 +275,9 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 </p>
 </details>
 
-
 ### Which two pieces of information should be included in a security advisory ?
 
+<details><summary>show</summary>
 <p>
 
 **Product affected** and **severity**
@@ -288,6 +288,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 
 ### Which authentication mechanism allow user to connect using their company's credentials ?
 
+<details><summary>show</summary>
 <p>
 
 **SAML SSO**
@@ -297,6 +298,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 
 ### What are the supported 2FA (multi factor authentication) methods ?
 
+<details><summary>show</summary>
 <p>
 
 - SMS
@@ -309,6 +311,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 
 ### Which feature allow to synchronize exchange of user identity data between your Idp and GitHub ?
 
+<details><summary>show</summary>
 <p>
 
 **SCIM**
@@ -318,6 +321,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 
 ### What is the limit number of user in one GitHub organization ?
 
+<details><summary>show</summary>
 <p>
 
 **10000**
@@ -332,6 +336,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 
 ### What are the different types of support of Enterprise Support ?
 
+<details><summary>show</summary>
 <p>
 
 - GitHub Enterprise Support (Included with Enterprise Cloud and Enterprise Server)
@@ -343,6 +348,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 
 ### What kind of info can you find using Audit Log API ?
 
+<details><summary>show</summary>
 <p>
 
 - Accesses your organization or repository settings.
@@ -356,6 +362,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 
 ### Does the support covers account, server, and security issues ?
 
+<details><summary>show</summary>
 <p>
 
 No, it covers Account, Security, and Abuse issues
@@ -366,6 +373,7 @@ No, it covers Account, Security, and Abuse issues
 
 ### Can you prevent users to use Actions from the marketplace ?
 
+<details><summary>show</summary>
 <p>
 
 Yes, using Policies and restricting to local actions only.
@@ -376,6 +384,7 @@ Yes, using Policies and restricting to local actions only.
 
 ### Can you allow users to only used actions created by GitHub or verified creators ?
 
+<details><summary>show</summary>
 <p>
 
 Yes, using Policies and restricting to specific actions (menu "Allow select actions").
@@ -386,6 +395,7 @@ Yes, using Policies and restricting to specific actions (menu "Allow select acti
 
 ### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
 
+<details><summary>show</summary>
 <p>
 
 Yes, but they may not be the last version of them.
@@ -396,6 +406,7 @@ Yes, but they may not be the last version of them.
 
 ### Which feature allow to provide already premade templaces to users when they want to create a workflow ?
 
+<details><summary>show</summary>
 <p>
 
 It's called a **workflow template**
@@ -405,6 +416,7 @@ It's called a **workflow template**
 
 ### Which two files are mandatory when create a workflow template ?
 
+<details><summary>show</summary>
 <p>
 
 - a workflow file with a yml extension (**my-workflow**.yml)
@@ -418,6 +430,7 @@ Both files must have the same name.
 
 ### Which placeholder keyword allow to inject the current default branch in a workflow template ?
 
+<details><summary>show</summary>
 <p>
 
 **$default-branch**
