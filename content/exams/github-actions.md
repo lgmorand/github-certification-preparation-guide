@@ -1,9 +1,13 @@
+# GitHub Actions
+
+> These are NOT real questions from the exam but quite close enough to help you to prepare it and obtain the certification
+
 ## Skills measured
 
-- [Author and maintain workflows](#author-and-maintain-actions)
-- [Consume workflows](#consume-workflows)
-- [Author and maintain actions](#manage-github-actions-for-the-enterprise)
-- [Manage GitHub Actions for the enterprise](#manage-github-actions-for-the-enterprise)
+- [Author and maintain workflows](#author-and-maintain-actions) (40% of the exam)
+- [Consume workflows](#consume-workflows) (20% of the exam)
+- [Author and maintain actions](#manage-github-actions-for-the-enterprise) (25% of the exam)
+- [Manage GitHub Actions for the enterprise](#manage-github-actions-for-the-enterprise) (15% of the exam)
 
 ## Author and maintain workflows
 

@@ -1,14 +1,30 @@
-# GitHub Entreprise
+# GitHub Administration
+
+> These are NOT real questions from the exam but quite close enough to help you to prepare it and obtain the certification
 
 ## Skills measured
 
-- Support GitHub Enterprise for users and key stakeholders
-- Manage user identities and GitHub authentication
-- Describe how GitHub is deployed, distributed, and licensed
-- Manage access and permissions based on membership
-- Enable secure software development and ensure compliance
-- Manage GitHub Actions
-- Manage GitHub Packages
+- [Support GitHub Enterprise for users and key stakeholders](#support-github-enterprise-for-users-and-key-stakeholders) (15% of the exam)
+- [Manage user identities and GitHub authentication](#manage-user-identities-and-github-authentication) (20% of the exam)
+- [Describe how GitHub is deployed, distributed, and licensed](#describe-how-github-is-deployed-distributed-and-licensed) (5% of the exam)
+- [Manage access and permissions based on membership](#manage-access-and-permissions-based-on-membership) (20% of the exam)
+- [Enable secure software development and ensure compliance](#enable-secure-software-development-and-ensure-compliance) (15% of the exam)
+- [Manage GitHub Actions](#manage-github-actions) (20% of the exam)
+- [Manage GitHub Packages](#manage-github-packages) (5% of the exam)
+
+## Support GitHub Enterprise for users and key stakeholders
+
+## Manage user identities and GitHub authentication
+
+## Describe how GitHub is deployed, distributed, and licensed
+
+## Manage access and permissions based on membership
+
+## Enable secure software development and ensure compliance
+
+## Manage GitHub Actions
+
+## Manage GitHub Packages
 
 ### What role is required to edit a team ?
 
@@ -237,7 +253,7 @@ In the **Insights** tab and then **Dependency graph**.
 If you want to act **before** a commit, you must use pre-commit hook which allow to scan the code before the commit.
 
 </p>
-</details
+</details>
 
 ### Which tools can be used to tamper Git history and erase sensitive data ?
 
@@ -247,7 +263,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 **git filter-repo** & **BFG Repo-Cleaner**
 
 </p>
-</details
+</details>
 
 ### Which tools can be used to tamper Git history and erase sensitive data ?
 
@@ -257,14 +273,160 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 **git filter-repo** & **BFG Repo-Cleaner**
 
 </p>
-</details
+</details>
 
 
-### Which two pieces of information should be included in a security advisory
+### Which two pieces of information should be included in a security advisory ?
 
 <p>
 
 **Product affected** and **severity**
 
 </p>
-</details
+</details>
+
+
+### Which authentication mechanism allow user to connect using their company's credentials ?
+
+<p>
+
+**SAML SSO**
+
+</p>
+</details>
+
+### What are the supported 2FA (multi factor authentication) methods ?
+
+<p>
+
+- SMS
+- TOTP app
+- security keys
+
+</p>
+</details>
+
+
+### Which feature allow to synchronize exchange of user identity data between your Idp and GitHub ?
+
+<p>
+
+**SCIM**
+
+</p>
+</details>
+
+### What is the limit number of user in one GitHub organization ?
+
+<p>
+
+**10000**
+
+- Maximum number of members in a GitHub team: 5000
+- Maximum number of members in a GitHub organization: 10000
+- Maximum number of teams in a GitHub organization: 1500
+
+</p>
+</details>
+
+
+### What are the different types of support of Enterprise Support ?
+
+<p>
+
+- GitHub Enterprise Support (Included with Enterprise Cloud and Enterprise Server)
+- GitHub Enterprise Premium support
+- GitHub Enterprise Premium Plus support
+
+</p>
+</details>
+
+### What kind of info can you find using Audit Log API ?
+
+<p>
+
+- Accesses your organization or repository settings.
+- Changes permissions.
+- Adds or removes users in an organization, repository, or team.
+- Promotes users to admin.
+- Changes permissions of a GitHub App.
+
+</p>
+</details>
+
+### Does the support covers account, server, and security issues ?
+
+<p>
+
+No, it covers Account, Security, and Abuse issues
+
+</p>
+</details>
+
+
+### Can you prevent users to use Actions from the marketplace ?
+
+<p>
+
+Yes, using Policies and restricting to local actions only.
+
+</p>
+</details>
+
+
+### Can you allow users to only used actions created by GitHub or verified creators ?
+
+<p>
+
+Yes, using Policies and restricting to specific actions (menu "Allow select actions").
+
+</p>
+</details>
+
+
+### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
+
+<p>
+
+Yes, but they may not be the last version of them.
+
+</p>
+</details>
+
+
+### Which feature allow to provide already premade templaces to users when they want to create a workflow ?
+
+<p>
+
+It's called a **workflow template**
+
+</p>
+</details>
+
+### Which two files are mandatory when create a workflow template ?
+
+<p>
+
+- a workflow file with a yml extension (**my-workflow**.yml)
+- a propertires files with ".properties.json" extention (**my-workflow**.properties.json)
+
+Both files must have the same name.
+
+</p>
+</details>
+
+
+### Which placeholder keyword allow to inject the current default branch in a workflow template ?
+
+<p>
+
+**$default-branch**
+
+```yaml
+on:
+  push:
+    branches: [ $default-branch ]
+```
+
+</p>
+</details>

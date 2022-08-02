@@ -1,5 +1,7 @@
 # GitHub Advanced Security
 
+> These are NOT real questions from the exam but quite close enough to help you to prepare it and obtain the certification
+> 
 ## Skills measured
 
 - Describe the GitHub Advanced Security features and functionality

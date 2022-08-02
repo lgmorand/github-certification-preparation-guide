@@ -14,4 +14,4 @@ I recommend the [Microsoft Learn path](https://docs.microsoft.com/en-us/users/gi
 
 ## Test exam
 
-When you are almost ready, you can test your skills with the [test exam](../exams/github-advanced-security.md).
+When you are ready, you can test your skills with the [test exam](../exams/github-advanced-security.md).
