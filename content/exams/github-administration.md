@@ -14,18 +14,6 @@
 
 ## Support GitHub Enterprise for users and key stakeholders
 
-## Manage user identities and GitHub authentication
-
-## Describe how GitHub is deployed, distributed, and licensed
-
-## Manage access and permissions based on membership
-
-## Enable secure software development and ensure compliance
-
-## Manage GitHub Actions
-
-## Manage GitHub Packages
-
 ### What role is required to edit a team ?
 
 <details><summary>show</summary>
@@ -36,22 +24,25 @@
 </p>
 </details>
 
-### Can be GitHub synchronized with an identity provider ?
-
-<details><summary>show</summary>
-<p>
-
-Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, etc
-
-</p>
-</details>
-
 ### Can you have nested teams in GitHub ?
 
 <details><summary>show</summary>
 <p>
 
 Yes and it is a general pratice [to use them to reflect](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams#nested-teams) the current enterprise internal's organization.
+
+</p>
+</details>
+
+
+## Manage user identities and GitHub authentication
+
+### Can be GitHub synchronized with an identity provider ?
+
+<details><summary>show</summary>
+<p>
+
+Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, etc
 
 </p>
 </details>
@@ -69,25 +60,42 @@ Yes and it is a general pratice [to use them to reflect](https://docs.github.com
 </p>
 </details>
 
-### Which role access should you give to a contributor with full control on the repo except access to sensitive or destructive actions  ?
+
+## Describe how GitHub is deployed, distributed, and licensed
+
+### Can an enterprise contain several organizations  ?
 
 <details><summary>show</summary>
 <p>
 
-**maintainer** because **admin** role would for instance allow to delete a repo
+yes.
 
 </p>
 </details>
 
-## What is the appropriate repository permission level for contributors who will actively push changes to your repository
+
+### Are the hosted agents totally free ?
 
 <details><summary>show</summary>
 <p>
 
-**write**
+Yes for public repositories. For private repositories, you have free minutes of usage offered per month
 
 </p>
 </details>
+
+
+### You plan on using GitHub Actions to build, test, and deliver your cross-platform code. Which of the following platforms will be the most expensive to use?
+
+<details><summary>show</summary>
+<p>
+
+macOS. It cost 10 times (in terms of minute of compute) the price of a linux minute
+
+</p>
+</details>
+
+## Manage access and permissions based on membership
 
 ### What are the two roles available at team level  ?
 
@@ -113,6 +121,27 @@ Yes and it is a general pratice [to use them to reflect](https://docs.github.com
 </details>
 
 
+
+### Which role access should you give to a contributor with full control on the repo except access to sensitive or destructive actions  ?
+
+<details><summary>show</summary>
+<p>
+
+**maintainer** because **admin** role would for instance allow to delete a repo
+
+</p>
+</details>
+
+### What is the appropriate repository permission level for contributors who will actively push changes to your repository
+
+<details><summary>show</summary>
+<p>
+
+**write**
+
+</p>
+</details>
+
 ### By default, can all users of an organization see all repositories ?
 
 <details><summary>show</summary>
@@ -123,57 +152,7 @@ Yes if the "Read" access is defined as default role in "base permissions" in the
 </p>
 </details>
 
-### What is the simplest way to prevent the creation of public repository  ?
-
-<details><summary>show</summary>
-<p>
-
-At the organization level, in "Member privileges" settings, disallow the creation of public repositories.
-
-</p>
-</details>
-
-
-### Can an enterprise contain several organizations  ?
-
-<details><summary>show</summary>
-<p>
-
-yes.
-
-</p>
-</details>
-
-
-### Are the hosted agents totally free ?
-
-<details><summary>show</summary>
-<p>
-
-Yes for public repositories. For private repositories, you have free minutes of usage offered per month
-
-</p>
-</details>
-
-### You plan on using GitHub Actions to build, test, and deliver your cross-platform code. Which of the following platforms will be the most expensive to use?
-
-<details><summary>show</summary>
-<p>
-
-macOS. It cost 10 times (in terms of minute of compute) the price of a linux minute
-
-</p>
-</details>
-
-### If you plan to communicate about your security policy, like disclosing vulnerabilities, where should you store your policy publicly ?
-
-<details><summary>show</summary>
-<p>
-
-In the root of your repository in a file named SECURITY.md.
-
-</p>
-</details>
+## Enable secure software development and ensure compliance
 
 ### How can you exclude sensitive files from your repository ?
 
@@ -215,6 +194,97 @@ You should use [CODEOWNERS](https://docs.github.com/en/repositories/managing-you
 
 </p>
 </details>
+
+### What is the simplest way to prevent the creation of public repository  ?
+
+<details><summary>show</summary>
+<p>
+
+At the organization level, in "Member privileges" settings, disallow the creation of public repositories.
+
+</p>
+</details>
+
+## Manage GitHub Actions
+
+### Which two files are mandatory when create a workflow template ?
+
+<details><summary>show</summary>
+<p>
+
+- a workflow file with a yml extension (**my-workflow**.yml)
+- a propertires files with ".properties.json" extention (**my-workflow**.properties.json)
+
+Both files must have the same name.
+
+</p>
+</details>
+
+
+### Which placeholder keyword allow to inject the current default branch in a workflow template ?
+
+<details><summary>show</summary>
+<p>
+
+**$default-branch**
+
+```yaml
+on:
+  push:
+    branches: [ $default-branch ]
+```
+
+</p>
+</details>
+
+### Can you prevent users to use Actions from the marketplace ?
+
+<details><summary>show</summary>
+<p>
+
+Yes, using Policies and restricting to local actions only.
+
+</p>
+</details>
+
+
+### Can you allow users to only used actions created by GitHub or verified creators ?
+
+<details><summary>show</summary>
+<p>
+
+Yes, using Policies and restricting to specific actions (menu "Allow select actions").
+
+</p>
+</details>
+
+
+### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
+
+<details><summary>show</summary>
+<p>
+
+Yes, but they may not be the last version of them.
+
+</p>
+</details>
+
+## Manage GitHub Packages
+
+
+
+
+### If you plan to communicate about your security policy, like disclosing vulnerabilities, where should you store your policy publicly ?
+
+<details><summary>show</summary>
+<p>
+
+In the root of your repository in a file named SECURITY.md.
+
+</p>
+</details>
+
+
 
 ### In which part of your repository can you find the dependency graph listing all the packages your repo depends on ?
 
@@ -371,37 +441,7 @@ No, it covers Account, Security, and Abuse issues
 </details>
 
 
-### Can you prevent users to use Actions from the marketplace ?
 
-<details><summary>show</summary>
-<p>
-
-Yes, using Policies and restricting to local actions only.
-
-</p>
-</details>
-
-
-### Can you allow users to only used actions created by GitHub or verified creators ?
-
-<details><summary>show</summary>
-<p>
-
-Yes, using Policies and restricting to specific actions (menu "Allow select actions").
-
-</p>
-</details>
-
-
-### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
-
-<details><summary>show</summary>
-<p>
-
-Yes, but they may not be the last version of them.
-
-</p>
-</details>
 
 
 ### Which feature allow to provide already premade templaces to users when they want to create a workflow ?
@@ -414,32 +454,3 @@ It's called a **workflow template**
 </p>
 </details>
 
-### Which two files are mandatory when create a workflow template ?
-
-<details><summary>show</summary>
-<p>
-
-- a workflow file with a yml extension (**my-workflow**.yml)
-- a propertires files with ".properties.json" extention (**my-workflow**.properties.json)
-
-Both files must have the same name.
-
-</p>
-</details>
-
-
-### Which placeholder keyword allow to inject the current default branch in a workflow template ?
-
-<details><summary>show</summary>
-<p>
-
-**$default-branch**
-
-```yaml
-on:
-  push:
-    branches: [ $default-branch ]
-```
-
-</p>
-</details>

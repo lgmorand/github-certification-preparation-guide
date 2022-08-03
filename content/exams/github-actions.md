@@ -41,6 +41,7 @@ on:
 </p>
 </details>
 
+
 ### What is the keyword to ensure a job must run after another successful job ?
 
 <details><summary>show</summary>
@@ -64,7 +65,7 @@ jobs:
 
 
 
-###  In which folder must be placed your workflows's YAML files?
+### In which folder must be placed your workflows's YAML files?
 
 <details><summary>show</summary>
 <p>
@@ -104,37 +105,7 @@ jobs:
 </details>
 
 
-
-
-
 ## Consume workflows
-
-## Author and maintain actions
-
-
-## Manage GitHub Actions for the enterprise
-
-
-
-
-### What are the three different ways to call a version of an Action
-
-<details><summary>show</summary>
-<p>
-
-- the branch name
-- the version (semver)
-- the commit hash
-
-```yaml
-steps:
-  - uses: github/my-action@v1
-  - uses: github/my-action@main
-  - uses: github/my-action@734713bc047d87bf7eac9674765ae793478c50d3
-```
-
-</p>
-</details>
 
 ### What are the two "secure" ways to call a specific version of an Action
 
@@ -155,64 +126,7 @@ The branch name is not secure as it can change at anytime. The version (using se
 </details>
 
 
-
-
-### Which variable contains the name of the repository and the name of the owner ?
-
-<details><summary>show</summary>
-<p>
-
-**GITHUB_REPOSITORY**
-
-</p>
-</details>
-
-### Which variable contains the name of the user who triggered the workflow ?
-
-<details><summary>show</summary>
-<p>
-
-**GITHUB_ACTOR**
-
-</p>
-</details>
-
-### Which variable contains the name of the branch or tag which triggered the current workflow ?
-
-<details><summary>show</summary>
-<p>
-
-**GITHUB_REF_NAME**
-
-/!\ GITHUB_REF will contains the full name (*refs/heads/<branch_name>*)
-
-</p>
-</details>
-### Do the jobs of a workflow run on the same machine ?
-
-<details><summary>show</summary>
-<p>
-
-```yaml
-
-```
-
-</p>
-</details>
-
-###  How to call a variable which has been defined as a secret ?
-
-<details><summary>show</summary>
-<p>
-
-```yaml
-
-```
-
-</p>
-</details>
-
-### How to create a manual approbal step in a workflow ?
+### How to create a manual approval step in a workflow ?
 
 <details><summary>show</summary>
 <p>
@@ -252,6 +166,84 @@ The branch name is not secure as it can change at anytime. The version (using se
 
 ### How many combinations are created with the following matrix  ?
 
+### Which variable contains the name of the repository and the name of the owner ?
+
+<details><summary>show</summary>
+<p>
+
+**GITHUB_REPOSITORY**
+
+</p>
+</details>
+
+### Which variable contains the name of the user who triggered the workflow ?
+
+<details><summary>show</summary>
+<p>
+
+**GITHUB_ACTOR**
+
+</p>
+</details>
+
+### Which variable contains the name of the branch or tag which triggered the current workflow ?
+
+<details><summary>show</summary>
+<p>
+
+**GITHUB_REF_NAME**
+
+/!\ GITHUB_REF will contains the full name (*refs/heads/<branch_name>*)
+
+</p>
+</details>
+
+### Do the jobs of a workflow run on the same machine ?
+
+<details><summary>show</summary>
+<p>
+
+```yaml
+
+```
+
+</p>
+</details>
+
+### What are the three different ways to call a version of an Action
+
+<details><summary>show</summary>
+<p>
+
+- the branch name
+- the version (semver)
+- the commit hash
+
+```yaml
+steps:
+  - uses: github/my-action@v1
+  - uses: github/my-action@main
+  - uses: github/my-action@734713bc047d87bf7eac9674765ae793478c50d3
+```
+
+</p>
+</details>
+
+
+### How to call a variable which has been defined as a secret ?
+
+<details><summary>show</summary>
+<p>
+
+```yaml
+
+```
+
+</p>
+</details>
+
+
+
 ```yaml
 jobs:
   example_matrix:
@@ -268,3 +260,13 @@ jobs:
   
 </p>
 </details>
+
+
+
+
+## Author and maintain actions
+
+
+
+## Manage GitHub Actions for the enterprise
+
