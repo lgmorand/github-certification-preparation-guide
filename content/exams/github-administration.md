@@ -479,6 +479,9 @@ runs-on: [self-hosted, linux, ARM64]
 
 In the *_diag* folder.
 
+</p>
+</details>
+
 ## Manage GitHub Packages
 
 ### Can you upload containers images in GitHub Packages ?
