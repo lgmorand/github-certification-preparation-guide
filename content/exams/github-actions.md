@@ -264,9 +264,131 @@ jobs:
 
 
 
+### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM ?
+
+<details><summary>show</summary>
+<p>
+
+You need to use a "route" by specifying the labels you want to target:
+
+```yaml
+runs-on: [self-hosted, linux, ARM64]
+```
+
+### You have a workflow secret named MY_SECRET. What if the format to call it from the workflow ?
+
+<details><summary>show</summary>
+<p>
+
+```yaml
+steps:
+  - name: Hello world action
+    with: # Set the secret as an input
+      super_secret: ${{ secrets.MY_SECRET }}
+```
+
+</p>
+</details>
+
 ## Author and maintain actions
 
 
 
 ## Manage GitHub Actions for the enterprise
+
+### Can you prevent users to use Actions from the marketplace ?
+
+<details><summary>show</summary>
+<p>
+
+Yes, using Policies and restricting to local actions only.
+
+</p>
+</details>
+
+
+### Can you allow users to only used actions created by GitHub or verified creators ?
+
+<details><summary>show</summary>
+<p>
+
+Yes, using Policies and restricting to specific actions (menu "Allow select actions").
+
+</p>
+</details>
+
+
+### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
+
+<details><summary>show</summary>
+<p>
+
+Yes, but they may not be the last version of them.
+
+</p>
+</details>
+
+
+
+
+
+### Can you upload containers images in GitHub Packages ?
+
+<details><summary>show</summary>
+<p>
+
+Yes.
+
+</p>
+</details>
+
+### Can you upload containers images in GitHub Packages ?
+
+<details><summary>show</summary>
+<p>
+
+Yes.
+
+</p>
+</details>
+
+### What is the docker command to publish a container image on GitHub Packages ?
+
+<details><summary>show</summary>
+<p>
+
+```bash
+docker push ghcr.io/OWNER/IMAGE_NAME:latest
+```
+
+</p>
+</details>
+
+
+### What are the (programming) package managers supported by GitHub Packages  ?
+
+<details><summary>show</summary>
+<p>
+
+- npm, a NodeJS package manager
+- NuGet, the .NET package manager
+- RubyGems
+- Maven and Gradle, two package managers for Java
+
+</p>
+</details>
+
+### In which scenarios should you NOT use GitHub Packages ?
+
+- When I want to share code between methods of my application.
+- When I want to share container images among developers of your team.
+- When I want to publish a small code library as an open-source project.
+
+<details><summary>show</summary>
+<p>
+
+**When I want to share code between methods of my application**
+
+</p>
+</details>
 

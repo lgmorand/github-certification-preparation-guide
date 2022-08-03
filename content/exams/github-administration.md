@@ -61,6 +61,53 @@ Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, e
 </details>
 
 
+### Which authentication mechanism allow user to connect using their company's credentials ?
+
+<details><summary>show</summary>
+<p>
+
+**SAML SSO**
+
+</p>
+</details>
+
+### What are the supported 2FA (multi factor authentication) methods ?
+
+<details><summary>show</summary>
+<p>
+
+- SMS
+- TOTP app
+- security keys
+
+</p>
+</details>
+
+
+### Which feature allow to synchronize exchange of user identity data between your Idp and GitHub ?
+
+<details><summary>show</summary>
+<p>
+
+**SCIM**
+
+</p>
+</details>
+
+### What is the limit number of user in one GitHub organization ?
+
+<details><summary>show</summary>
+<p>
+
+**10000**
+
+- Maximum number of members in a GitHub team: 5000
+- Maximum number of members in a GitHub organization: 10000
+- Maximum number of teams in a GitHub organization: 1500
+
+</p>
+</details>
+
 ## Describe how GitHub is deployed, distributed, and licensed
 
 ### Can an enterprise contain several organizations  ?
@@ -91,6 +138,43 @@ Yes for public repositories. For private repositories, you have free minutes of 
 <p>
 
 macOS. It cost 10 times (in terms of minute of compute) the price of a linux minute
+
+</p>
+</details>
+
+
+### What are the different types of support of Enterprise Support ?
+
+<details><summary>show</summary>
+<p>
+
+- GitHub Enterprise Support (Included with Enterprise Cloud and Enterprise Server)
+- GitHub Enterprise Premium support
+- GitHub Enterprise Premium Plus support
+
+</p>
+</details>
+
+### What kind of info can you find using Audit Log API ?
+
+<details><summary>show</summary>
+<p>
+
+- Accesses your organization or repository settings.
+- Changes permissions.
+- Adds or removes users in an organization, repository, or team.
+- Promotes users to admin.
+- Changes permissions of a GitHub App.
+
+</p>
+</details>
+
+### Does the support covers account, server, and security issues ?
+
+<details><summary>show</summary>
+<p>
+
+No, it covers Account, Security, and Abuse issues
 
 </p>
 </details>
@@ -205,6 +289,90 @@ At the organization level, in "Member privileges" settings, disallow the creatio
 </p>
 </details>
 
+### If you plan to communicate about your security policy, like disclosing vulnerabilities, where should you store your policy publicly ?
+
+<details><summary>show</summary>
+<p>
+
+In the root of your repository in a file named SECURITY.md.
+
+</p>
+</details>
+
+### In which part of your repository can you find the dependency graph listing all the packages your repo depends on ?
+
+<details><summary>show</summary>
+<p>
+
+In the **Insights** tab and then **Dependency graph**.
+</p>
+</details>
+
+
+### Which feature of GitHub scan your repo and alerts you in case of detected vulnerabilities in your dependencies ?
+
+<details><summary>show</summary>
+<p>
+
+**GitHub Security Advisories**.
+</p>
+</details>
+
+
+### Which feature of GitHub scan your repo and alerts you in case of detected vulnerabilities and automatically create a pull request to fix it ?
+
+<details><summary>show</summary>
+<p>
+
+**Dependabot**.
+</p>
+</details>
+
+### What is the feature which help to prevent to commit a secret ?
+
+<details><summary>show</summary>
+<p>
+
+If you want to act **before** a commit, you must use pre-commit hook which allow to scan the code before the commit.
+
+</p>
+</details>
+
+### Which tools can be used to tamper Git history and erase sensitive data ?
+
+<details><summary>show</summary>
+<p>
+
+**git filter-repo** & **BFG Repo-Cleaner**
+
+</p>
+</details>
+
+### Which two pieces of information should be included in a security advisory ?
+
+<details><summary>show</summary>
+<p>
+
+**Product affected** and **severity**
+
+</p>
+</details>
+
+### You have a workflow secret named MY_SECRET. What if the format to call it from the workflow ?
+
+<details><summary>show</summary>
+<p>
+
+```yaml
+steps:
+  - name: Hello world action
+    with: # Set the secret as an input
+      super_secret: ${{ secrets.MY_SECRET }}
+```
+
+</p>
+</details>
+
 ## Manage GitHub Actions
 
 ### Which two files are mandatory when create a workflow template ?
@@ -269,187 +437,95 @@ Yes, but they may not be the last version of them.
 </p>
 </details>
 
-## Manage GitHub Packages
-
-
-
-
-### If you plan to communicate about your security policy, like disclosing vulnerabilities, where should you store your policy publicly ?
-
-<details><summary>show</summary>
-<p>
-
-In the root of your repository in a file named SECURITY.md.
-
-</p>
-</details>
-
-
-
-### In which part of your repository can you find the dependency graph listing all the packages your repo depends on ?
-
-<details><summary>show</summary>
-<p>
-
-In the **Insights** tab and then **Dependency graph**.
-</p>
-</details>
-
-
-### Which feature of GitHub scan your repo and alerts you in case of detected vulnerabilities in your dependencies ?
-
-<details><summary>show</summary>
-<p>
-
-**GitHub Security Advisories**.
-</p>
-</details>
-
-
-### Which feature of GitHub scan your repo and alerts you in case of detected vulnerabilities and automatically create a pull request to fix it ?
-
-<details><summary>show</summary>
-<p>
-
-**Dependabot**.
-</p>
-</details>
-
-### What is the feature which help to prevent to commit a secret ?
-
-<details><summary>show</summary>
-<p>
-
-If you want to act **before** a commit, you must use pre-commit hook which allow to scan the code before the commit.
-
-</p>
-</details>
-
-### Which tools can be used to tamper Git history and erase sensitive data ?
-
-<details><summary>show</summary>
-<p>
-
-**git filter-repo** & **BFG Repo-Cleaner**
-
-</p>
-</details>
-
-### Which tools can be used to tamper Git history and erase sensitive data ?
-
-<details><summary>show</summary>
-<p>
-
-**git filter-repo** & **BFG Repo-Cleaner**
-
-</p>
-</details>
-
-### Which two pieces of information should be included in a security advisory ?
-
-<details><summary>show</summary>
-<p>
-
-**Product affected** and **severity**
-
-</p>
-</details>
-
-
-### Which authentication mechanism allow user to connect using their company's credentials ?
-
-<details><summary>show</summary>
-<p>
-
-**SAML SSO**
-
-</p>
-</details>
-
-### What are the supported 2FA (multi factor authentication) methods ?
-
-<details><summary>show</summary>
-<p>
-
-- SMS
-- TOTP app
-- security keys
-
-</p>
-</details>
-
-
-### Which feature allow to synchronize exchange of user identity data between your Idp and GitHub ?
-
-<details><summary>show</summary>
-<p>
-
-**SCIM**
-
-</p>
-</details>
-
-### What is the limit number of user in one GitHub organization ?
-
-<details><summary>show</summary>
-<p>
-
-**10000**
-
-- Maximum number of members in a GitHub team: 5000
-- Maximum number of members in a GitHub organization: 10000
-- Maximum number of teams in a GitHub organization: 1500
-
-</p>
-</details>
-
-
-### What are the different types of support of Enterprise Support ?
-
-<details><summary>show</summary>
-<p>
-
-- GitHub Enterprise Support (Included with Enterprise Cloud and Enterprise Server)
-- GitHub Enterprise Premium support
-- GitHub Enterprise Premium Plus support
-
-</p>
-</details>
-
-### What kind of info can you find using Audit Log API ?
-
-<details><summary>show</summary>
-<p>
-
-- Accesses your organization or repository settings.
-- Changes permissions.
-- Adds or removes users in an organization, repository, or team.
-- Promotes users to admin.
-- Changes permissions of a GitHub App.
-
-</p>
-</details>
-
-### Does the support covers account, server, and security issues ?
-
-<details><summary>show</summary>
-<p>
-
-No, it covers Account, Security, and Abuse issues
-
-</p>
-</details>
-
-
-
-
-
 ### Which feature allow to provide already premade templaces to users when they want to create a workflow ?
 
 <details><summary>show</summary>
 <p>
 
 It's called a **workflow template**
+
+</p>
+</details>
+
+### What are the default labels applied to a self-hosted agent ?
+
+<details><summary>show</summary>
+<p>
+
+- *self-hosted*
+- the os: *linux*, *windows*, or *macOS*
+- the CPU architecture: *x64* , *ARM*, or *ARM64*
+
+</p>
+</details>
+
+
+### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM ?
+
+<details><summary>show</summary>
+<p>
+
+```yaml
+runs-on: [self-hosted, linux, ARM64]
+```
+
+</p>
+</details>
+
+### In which folder of a self-hosted agent can you find logs to debug the behavior of the runner ?
+
+<details><summary>show</summary>
+<p>
+
+In the *_diag* folder.
+
+## Manage GitHub Packages
+
+### Can you upload containers images in GitHub Packages ?
+
+<details><summary>show</summary>
+<p>
+
+Yes.
+
+</p>
+</details>
+
+### What is the docker command to publish a container image on GitHub Packages ?
+
+<details><summary>show</summary>
+<p>
+
+```bash
+docker push ghcr.io/OWNER/IMAGE_NAME:latest
+```
+
+</p>
+</details>
+
+### What are the (programming) package managers supported by GitHub Packages  ?
+
+<details><summary>show</summary>
+<p>
+
+- npm, a NodeJS package manager
+- NuGet, the .NET package manager
+- RubyGems
+- Maven and Gradle, two package managers for Java
+
+</p>
+</details>
+
+### In which scenarios should you NOT use GitHub Packages ?
+
+- When I want to share code between methods of my application.
+- When I want to share container images among developers of your team.
+- When I want to publish a small code library as an open-source project.
+
+<details><summary>show</summary>
+<p>
+
+**When I want to share code between methods of my application**
 
 </p>
 </details>
