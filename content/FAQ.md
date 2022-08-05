@@ -22,7 +22,7 @@ Just at the end of the exam. You will see a detailled score and you'll receive a
 
 ## Will I get a diploma ?
 
-**No!** At least not yet. Currently you don't get anything, no certification, no diploma, no badge on Credly. It is in their roadmap but be ready not to have any proof on your success except a simple email. You won't be able to brag on social networks :)
+**No!** At least not yet. Currently you don't get anything, no certification, no diploma, no badge on Credly. It is in GitHub's roadmap but be ready not to have any proof on your success except a simple email for the moment. You won't be able to brag on social networks :)
 
 ## What to do if you fail an exam
 
@@ -34,4 +34,4 @@ When you are ready to retake the exam, schedule an appointment as you normally w
 
 ## What is the passing score ?
 
-I'm not sure. In my case, I got 73 questions, but the final score said: "Passing score 35, you have 55/60".
+I'm not sure as is may change depending on the certification. In my case, I got 73 questions for GitHub Actions, but the final score said: "Passing score 35, you have 55/60". For administration, I got 66 questions and the passing score was 36/60.

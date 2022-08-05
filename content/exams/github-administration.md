@@ -35,6 +35,39 @@ Yes and it is a general pratice [to use them to reflect](https://docs.github.com
 </details>
 
 
+### Which format are available when exporting audit logs ?
+
+<details><summary>show</summary>
+<p>
+
+**JSON** and **CSV**
+
+</p>
+</details>
+
+### Which roles can be used to manage billing information ?
+
+<details><summary>show</summary>
+<p>
+
+**owner** and **billing manager**
+
+</p>
+</details>
+
+### On GitHub Enterprise Server, which command lines allows to generate a logs package to communicate to the support ?
+
+<details><summary>show</summary>
+<p>
+
+```bash
+ssh -p 122 admin@hostname -- 'ghe-support-bundle -o' > support-bundle.tgz
+```
+
+</p>
+</details>
+
+
 ## Manage user identities and GitHub authentication
 
 ### Can be GitHub synchronized with an identity provider ?
@@ -179,6 +212,28 @@ No, it covers Account, Security, and Abuse issues
 </p>
 </details>
 
+### Does GitHub Enterprise Server contains GitHub Actions feature ?
+
+<details><summary>show</summary>
+<p>
+
+Yes. It is disabled by default but it's here and it contains already some built-in actions created by GitHub. It does NOT require acces to Internet to work because you can sync/download the Actions locally.
+
+</p>
+</details>
+
+### Does GitHub Enterprise Server contains GitHub Packages feature?
+
+<details><summary>show</summary>
+<p>
+
+yes
+
+</p>
+</details>
+
+
+
 ## Manage access and permissions based on membership
 
 ### What are the two roles available at team level  ?
@@ -235,6 +290,27 @@ Yes if the "Read" access is defined as default role in "base permissions" in the
 
 </p>
 </details>
+
+### Which role allows a person to manage issues of a repository without any write rights ?
+
+<details><summary>show</summary>
+<p>
+
+**triage**
+
+</p>
+</details>
+
+### What is a deploy key ?
+
+<details><summary>show</summary>
+<p>
+
+You can launch projects from a repository on GitHub.com to your server by using a deploy key, which is an SSH key that grants access to a single repository. GitHub attaches the public part of the key directly to your repository instead of a personal account, and the private part of the key remains on your server.
+
+</p>
+</details>
+
 
 ## Enable secure software development and ensure compliance
 
@@ -295,6 +371,17 @@ At the organization level, in "Member privileges" settings, disallow the creatio
 <p>
 
 In the root of your repository in a file named SECURITY.md.
+
+</p>
+</details>
+
+
+### Using branch protection rule, which setting prevents merge commits ?
+
+<details><summary>show</summary>
+<p>
+
+**Require linear history** ([see documentation](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-linear-history))
 
 </p>
 </details>

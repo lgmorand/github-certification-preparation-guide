@@ -392,3 +392,51 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 </p>
 </details>
 
+
+
+
+
+### Which Action allows to upload an artifact ?
+
+<details><summary>show</summary>
+<p>
+
+```yaml
+- uses: actions/upload-artifact@v3
+  with:
+    name: my-artifact
+    path: path/to/artifact/world.txt
+```
+
+</p>
+</details>
+
+### Which Actions allows to pass an file from one job to another ?
+
+<details><summary>show</summary>
+<p>
+
+You can use upload-artifact and download-artifact
+```yaml
+jobs:
+  job1:
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: mkdir -p path/to/artifact
+
+      - run: echo hello > path/to/artifact/world.txt
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: path/to/artifact/world.txt
+  job2:
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
+```
+
+</p>
+</details>
