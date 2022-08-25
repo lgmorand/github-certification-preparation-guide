@@ -257,6 +257,9 @@ You need to use a "route" by specifying the labels you want to target:
 runs-on: [self-hosted, linux, ARM64]
 ```
 
+</p>
+</details>
+
 ### You have a workflow secret named MY_SECRET. What is the format to call it from the workflow ?
 
 <details><summary>show</summary>
