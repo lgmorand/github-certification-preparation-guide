@@ -34,7 +34,6 @@ Yes and it is a general pratice [to use them to reflect](https://docs.github.com
 </p>
 </details>
 
-
 ### Which format are available when exporting audit logs ?
 
 <details><summary>show</summary>
@@ -67,7 +66,6 @@ ssh -p 122 admin@hostname -- 'ghe-support-bundle -o' > support-bundle.tgz
 </p>
 </details>
 
-
 ## Manage user identities and GitHub authentication
 
 ### Can be GitHub synchronized with an identity provider ?
@@ -93,7 +91,6 @@ Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, e
 </p>
 </details>
 
-
 ### Which authentication mechanism allow user to connect using their company's credentials ?
 
 <details><summary>show</summary>
@@ -115,7 +112,6 @@ Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, e
 
 </p>
 </details>
-
 
 ### Which feature allow to synchronize exchange of user identity data between your Idp and GitHub ?
 
@@ -153,7 +149,6 @@ yes.
 </p>
 </details>
 
-
 ### Are the hosted agents totally free ?
 
 <details><summary>show</summary>
@@ -164,7 +159,6 @@ Yes for public repositories. For private repositories, you have free minutes of 
 </p>
 </details>
 
-
 ### You plan on using GitHub Actions to build, test, and deliver your cross-platform code. Which of the following platforms will be the most expensive to use?
 
 <details><summary>show</summary>
@@ -174,7 +168,6 @@ macOS. It cost 10 times (in terms of minute of compute) the price of a linux min
 
 </p>
 </details>
-
 
 ### What are the different types of support of Enterprise Support ?
 
@@ -232,8 +225,6 @@ yes
 </p>
 </details>
 
-
-
 ## Manage access and permissions based on membership
 
 ### What are the two roles available at team level  ?
@@ -258,7 +249,6 @@ yes
 
 </p>
 </details>
-
 
 
 ### Which role access should you give to a contributor with full control on the repo except access to sensitive or destructive actions  ?
@@ -311,7 +301,6 @@ You can launch projects from a repository on GitHub.com to your server by using 
 </p>
 </details>
 
-
 ## Enable secure software development and ensure compliance
 
 ### How can you exclude sensitive files from your repository ?
@@ -323,7 +312,6 @@ One technique to help avoid the majority of this risk is to build and maintain *
 
 </p>
 </details>
-
 
 ### Once a sensitive data has been commited, can you erase the history to keep the data secret again ?
 
@@ -475,7 +463,6 @@ Both files must have the same name.
 </p>
 </details>
 
-
 ### Which placeholder keyword allow to inject the current default branch in a workflow template ?
 
 <details><summary>show</summary>
@@ -502,7 +489,6 @@ Yes, using Policies and restricting to local actions only.
 </p>
 </details>
 
-
 ### Can you allow users to only used actions created by GitHub or verified creators ?
 
 <details><summary>show</summary>
@@ -512,7 +498,6 @@ Yes, using Policies and restricting to specific actions (menu "Allow select acti
 
 </p>
 </details>
-
 
 ### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
 
@@ -545,7 +530,6 @@ It's called a **workflow template**
 
 </p>
 </details>
-
 
 ### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM ?
 
@@ -619,4 +603,3 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 
 </p>
 </details>
-

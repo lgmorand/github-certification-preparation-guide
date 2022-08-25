@@ -10,7 +10,7 @@ Right now, the price is 200$ per certification.
 
 ## Can I get one for free ?
 
-I don't know. Ask GitHub. Be Microsoft employees can get it for free if they schedule an exam with their professional email.
+I don't know. Ask GitHub. All Microsoft employees can get it for free if they schedule an exam with their professional email.
 
 ## Do any any prerequisites to pass a certification ?
 
@@ -26,7 +26,7 @@ Just at the end of the exam. You will see a detailled score and you'll receive a
 
 ## What to do if you fail an exam
 
-If you fail a certification exam, you can retake it. There is a 21-day waiting period between retakes in order to maintain the integrity of the exam.
+If you fail a certification exam, you can retake it. There is a **21-day** waiting period between retakes in order to maintain the integrity of the exam.
 
 Your score report will indicate the content areas that are strengths or weaknesses. Prioritize the skills that you should practice by focusing on the content areas where your exam performance was the weakest. Additionally, you may want to review the resources provided on the exam details page. GitHub does not share information about specific questions that were not answered correctly.
 
