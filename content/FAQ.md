@@ -12,9 +12,9 @@ Right now, the price is 200$ per certification.
 
 I don't know. Ask GitHub. All Microsoft employees can get it for free if they schedule an exam with their professional email.
 
-## Do any any prerequisites to pass a certification ?
+## Do I need any prerequisites to pass a certification ?
 
-No
+No but be prepared, they are not that easy.
 
 ## When do I get the results ?
 
@@ -22,7 +22,7 @@ Just at the end of the exam. You will see a detailled score and you'll receive a
 
 ## Will I get a diploma ?
 
-**No!** At least not yet. Currently you don't get anything, no certification, no diploma, no badge on Credly. It is in GitHub's roadmap but be ready not to have any proof on your success except a simple email for the moment. You won't be able to brag on social networks :)
+**No!** At least **not yet**. Currently you don't get anything, no certification, no diploma, no badge on Credly, nothing. It is in GitHub's roadmap but they don't have any ETA. Be ready not to have any proof on your success except a simple email for the moment. You won't be able to brag on social networks :)
 
 ## What to do if you fail an exam
 
@@ -30,7 +30,7 @@ If you fail a certification exam, you can retake it. There is a **21-day** waiti
 
 Your score report will indicate the content areas that are strengths or weaknesses. Prioritize the skills that you should practice by focusing on the content areas where your exam performance was the weakest. Additionally, you may want to review the resources provided on the exam details page. GitHub does not share information about specific questions that were not answered correctly.
 
-When you are ready to retake the exam, schedule an appointment as you normally would. You must pay for each exam you retake and follow the exam retake policy.
+When you are ready to retake the exam, schedule an appointment as you normally would. You must pay for **each** exam you retake and follow the exam retake policy.
 
 ## What is the passing score ?
 

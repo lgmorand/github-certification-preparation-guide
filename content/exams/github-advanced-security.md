@@ -28,9 +28,9 @@
 
 ### Which area of focus does GitHub dependency management belong to?
 
-- Code scanning
-- Policies
-- Supply chain
+- [ ] Code scanning
+- [ ] Policies
+- [ ] Supply chain
 
 <details><summary>show</summary>
 <p>

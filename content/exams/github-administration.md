@@ -592,9 +592,9 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 
 ### In which scenarios should you NOT use GitHub Packages ?
 
-- When I want to share code between methods of my application.
-- When I want to share container images among developers of your team.
-- When I want to publish a small code library as an open-source project.
+- [ ] When I want to share code between methods of my application.
+- [ ] When I want to share container images among developers of your team.
+- [ ] When I want to publish a small code library as an open-source project.
 
 <details><summary>show</summary>
 <p>
