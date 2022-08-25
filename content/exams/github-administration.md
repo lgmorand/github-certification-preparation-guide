@@ -1,6 +1,6 @@
 # GitHub Administration
 
-> These are NOT real questions from the exam but quite close enough to help you to prepare it and obtain the certification
+> These are **NOT real questions** from the exam but quite close enough to what you can get to help you to prepare it and obtain the certification
 
 ## Skills measured
 

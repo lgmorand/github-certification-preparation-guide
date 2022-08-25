@@ -18,8 +18,8 @@ You will find **[guides and test exams here](content/readme.md).**
 
 ## Can I PR? There is an error/an alternative way/an extra question/solution I can offer
 
-Absolutely! Feel free to PR and edit/add questions and solutions, but please stick to the existing format.
+Absolutely! Feel free to PR and edit/add questions and solutions, but please stick to the existing format and do **not** commit real questions from the exam. This repo is not meant to be a certification dump.
 
 ## Can I fork it ?
 
-Of course but only if you plan to do a pull-request. If not, just star it to let people to easily find the original one.
+Of course but only if you plan to do a pull-request to contribute. If you want to keep it as bookmark, just star it to let people easily find the original one.

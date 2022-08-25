@@ -2,7 +2,7 @@
 
 # Certifications GitHub
 
-This guide will help to obtain the following certifications. If you have any questions, please read the [FAQ](FAQ.md).
+This guide will help to obtain the following certifications. If you have any questions, please **read the [FAQ](FAQ.md)**.
 
 | Name  | Description  |  |  |
 |---|---|---|---|

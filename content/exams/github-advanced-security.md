@@ -1,6 +1,6 @@
 # GitHub Advanced Security
 
-> These are NOT real questions from the exam but quite close enough to help you to prepare it and obtain the certification
+> These are **NOT real questions** from the exam but quite close enough to what you can get to help you to prepare it and obtain the certification
 
 ## Skills measured
 
@@ -133,7 +133,7 @@ In the **Security** > **Secret scanning** screen.
 <details><summary>show</summary>
 <p>
 
-Yes, you can add up to 100 custom patterns.
+Yes, you can add up to 100 custom patterns for a private repository and 500 for an organization.
 
 </p>
 </details>
@@ -225,13 +225,323 @@ paths-ignore:
 </p>
 </details>
 
-
-
-
 ## Configure and use dependency management
+
+### What is the name of the dependency scanning feature of GitHub ?
+
+<details><summary>show</summary>
+<p>
+
+Dependency graph (which is different from Dependabot!)
+
+</p>
+</details>
+
+### Does Dependency graph scan your source code ?
+
+<details><summary>show</summary>
+<p>
+
+Not really. It scans the files of your repository and is looking for dependencies/packages files (package.json, package.config, pom.xml, etc) but the code your wrote yourself is not scanned by this tool.
+
+</p>
+</details>
+
+### What are the dependencies checked by Dependency graph ?
+
+<details><summary>show</summary>
+<p>
+
+- The direct dependencies explicitly defined in a manifest or lock file.
+- The indirect dependencies, also known as transitive dependencies or subdependencies, which are dependencies used by packages that are dependencies of your project.
+- The vendored dependencies that are checked into a specific directory in your repository but aren't referenced in your manifest file (only available for some package managers).
+
+</p>
+</details>
+
+### What is the goal of Dependabot ?
+
+<details><summary>show</summary>
+<p>
+
+Dependabot keeps your dependencies up to date by informing you of any security vulnerabilities in your dependencies, and automatically opens pull requests to upgrade your dependencies to the next available secure version when a Dependabot alert is triggered, or to the latest version when a release is published.
+
+</p>
+</details>
+
+### What are the supported packages managers (list at least 5) ?
+
+<details><summary>show</summary>
+<p>
+
+- composer (PHP)
+- nuget (.Net)
+- maven (Java/Scala)
+- npm (JavaScript)
+- PIP (Python)
+- yarn (JavaScript)
+- RubyGems (Ruby)
+- Go modules (Go) - ONLY for GitHub Enterprise Security versions above 3.2
+- Python Poetry (Python) - ONLY for GitHub Enterprise Security versions above 3.3
+
+</p>
+</details>
+
+### Where can you find the list of last known vulnerabilities in the world ?
+
+<details><summary>show</summary>
+<p>
+
+You can use the [GitHub Advisory Database](https://github.com/advisories)
+
+</p>
+</details>
+
+### Can the contributors of a repository access to Dependabot alerts ?
+
+<details><summary>show</summary>
+<p>
+
+No, by default only repo owners and administrators can access them. But administrators and owners can also grant other teams and users with access to the repository, permissions to view and dismiss Dependabot alerts by adding them in **Access to alerts**"** section.
+
+</p>
+</details>
+
+### Which file allow to configure Dependabot behavior such as interval scanning or version control  ?
+
+<details><summary>show</summary>
+<p>
+
+dependabot.yml
+
+</p>
+</details>
+
+### Which channels can be used for Dependabot notifications ?
+
+<details><summary>show</summary>
+<p>
+
+- By email, an email is sent when Dependabot is enabled for a repository, when a new manifest file is committed to the repository, and when a new vulnerability with a critical or high severity is found.
+- In the user interface, a warning is shown in your repository's file and code views if there are any vulnerable dependencies.
+- On the command line, warnings are displayed as callbacks when you push to repositories with any vulnerable dependencies.
+- In your inbox, as web notifications. A web notification is sent when Dependabot is enabled for a repository, when a new manifest file is committed to the repository, and when a new vulnerability with a critical or high severity is found.
+- On GitHub for mobile, as web notifications.
+
+</p>
+</details>
+
+### How can you retrieve detected vulnerabilities programmatically ?
+
+<details><summary>show</summary>
+<p>
+
+Using GitHub GraphQL
+
+```graphql
+query {
+  repository(name: "${repo}", owner: "${org}") { 
+    vulnerabilityAlerts(first: 100) {
+      nodes { 
+        createdAt 
+        dismissedAt 
+        securityVulnerability { 
+          package { 
+            name 
+          } 
+          severity 
+          vulnerableVersionRange 
+          advisory { 
+            ghsaId 
+            publishedAt 
+            identifiers { 
+              type 
+              value 
+            } 
+          } 
+        } 
+      } 
+    } 
+  }
+}
+```
+
+</p>
+</details>
+
 ## Configure and use code scanning
+
+### What are the supported langages of code scanning ?
+
+<details><summary>show</summary>
+<p>
+
+- C/C++
+- C#
+- Go
+- Java
+- JavaScript/TypeScript
+- Python
+- Ruby
+
+</p>
+</details>
+
+### Which file format permits to integrate results for a 3rd party scanning tool ?
+
+<details><summary>show</summary>
+<p>
+
+The **SARIF** format (Static Analysis Results Interchange Format)
+
+</p>
+</details>
+
+### Which GitHub action allow to upload a SARIF file ?
+
+<details><summary>show</summary>
+<p>
+
+**codeql-action/upload-sarif**
+
+```yaml
+  steps:
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: results.sarif 
+```
+
+</p>
+</details>
+
+### What is the difference between dismiss and delete a code scanning alert ?
+
+<details><summary>show</summary>
+<p>
+
+When dismissing an alert:
+
+- It's dismissed in all branches
+- The alert is removed from the number of current alerts for your project
+- The alert is moved to the "Closed" list in the summary of alerts. You can reopen it from here, if required
+- The reason why you closed the alert is recorded
+- Next time code scanning runs, the same code won't generate an alert
+
+When deleting an alert:
+
+- It's deleted in all branches
+- The alert is removed from the number of current alerts for your project
+- It is not added to the "Closed" list in the summary of alerts
+- If the code that generated the alert stays the same, and the same code scanning tool runs again without any configuration changes, the alert will be shown again in your analysis results
+
+</p>
+</details>
+
 ## Use code scanning with CodeQL
+
+### What are the two ways of running CodeQL on GitHub ?
+
+<details><summary>show</summary>
+<p>
+
+- Add the CodeQL workflow to your repository. This uses the github/codeql-action to run the CodeQL CLI.
+- Run the CodeQL CLI directly in an external CI system and upload the results to GitHub.
+
+</p>
+</details>
+
+    Add the CodeQL workflow to your repository. This uses the github/codeql-action to run the CodeQL CLI.
+    Run the CodeQL CLI directly in an external CI system and upload the results to GitHub.
+
+
 ## Describe GitHub Advanced Security best practices, results, and how to take corrective measures
+
+### What is the name of the file to declare the security policy of a repository ?
+
+<details><summary>show</summary>
+<p>
+
+SECURITY.md
+
+</p>
+</details>
+
+### Which screen allows you to have a clear vision of all security issues in your organization ?
+
+<details><summary>show</summary>
+<p>
+
+the **Security Overview** screen.
+</p>
+</details>
+
+### Is security overview available for public repositories ?
+
+<details><summary>show</summary>
+<p>
+
+The Security Overview is only available on private repositories with GitHub Advanced Security
+
+</p>
+</details>
+
+### How can you give specific rights to GITHUB_TOKEN to automate security workflows ?
+
+<details><summary>show</summary>
+<p>
+
+You have to add a **permissions** section in your workflow YAML file.
+
+```yaml
+name: Create issue on commit
+
+on: [ push ]
+
+jobs:
+  create_commit:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create issue using REST API
+        run: |
+```
+
+</p>
+</details>
 
 ## Configure GitHub Advanced Security tools in GitHub Enterprise
 
+### What are the 3(+1) main features of GitHub Advanced Security ?
+
+<details><summary>show</summary>
+<p>
+
+- **Code scanning**: Automatically detect common vulnerabilities and coding errors.
+- **Secret scanning**: Receive alerts when secrets or keys are checked in, exclude files from scanning, and define up to 100 custom patterns.
+- **Dependency review**: Show the full impact of changes to dependencies and see details of any vulnerable versions before you merge a pull request.
+- **Security Overview**: Review the security configuration and alerts for an organization and identify the repositories at greatest risk.
+
+</p>
+</details>
+
+### What is the pricing model for GitHub Advanced Security ?
+
+<details><summary>show</summary>
+<p>
+
+Your pay one license (seat) for each active commiter in private/internal repositories.
+
+</p>
+</details>
+
+### How enable GitHub Advanced Security for GitHub Enterprise Server ?
+
+<details><summary>show</summary>
+<p>
+
+This can be done two ways: via the GitHub user interface or via the administrative shell (SSH). You need to ensure that your license for GitHub Enterprise Server has been upgraded to include GitHub Advanced Security and you have uploaded it to your GitHub Enterprise Server instance and you need to check for the technical prerequisites.
+
+</p>
+</details>

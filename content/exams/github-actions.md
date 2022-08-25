@@ -1,6 +1,6 @@
 # GitHub Actions
 
-> These are NOT real questions from the exam but quite close enough to help you to prepare it and obtain the certification
+> These are **NOT real questions** from the exam but quite close enough to what you can get to help you to prepare it and obtain the certification
 
 ## Skills measured
 
@@ -41,7 +41,6 @@ on:
 </p>
 </details>
 
-
 ### What is the keyword to ensure a job must run after another successful job ?
 
 <details><summary>show</summary>
@@ -57,13 +56,9 @@ jobs:
   job3:
     needs: [job1, job2]
 ```
+
 </p>
 </details>
-
-
-
-
-
 
 ### In which folder must be placed your workflows's YAML files?
 
@@ -104,7 +99,6 @@ jobs:
 </p>
 </details>
 
-
 ## Consume workflows
 
 ### What are the two "secure" ways to call a specific version of an Action
@@ -125,7 +119,6 @@ The branch name is not secure as it can change at anytime. The version (using se
 </p>
 </details>
 
-
 ### How to create a manual approval step in a workflow ?
 
 <details><summary>show</summary>
@@ -137,8 +130,6 @@ The branch name is not secure as it can change at anytime. The version (using se
 
 </p>
 </details>
-
-
 
 ### Which operating systems are supported to run GitHub Actions on hosted agents?
 
@@ -152,7 +143,6 @@ The branch name is not secure as it can change at anytime. The version (using se
 </p>
 </details>
 
-
 ### Which trigger allows to start a workflow manually ?
 
 <details><summary>show</summary>
@@ -162,7 +152,6 @@ The branch name is not secure as it can change at anytime. The version (using se
   
 </p>
 </details>
-
 
 ### How many combinations are created with the following matrix  ?
 
@@ -243,7 +232,6 @@ steps:
 </details>
 
 
-
 ```yaml
 jobs:
   example_matrix:
@@ -260,9 +248,6 @@ jobs:
   
 </p>
 </details>
-
-
-
 
 ### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM ?
 
@@ -291,8 +276,6 @@ steps:
 </details>
 
 ## Author and maintain actions
-
-
 
 ## Manage GitHub Actions for the enterprise
 
@@ -328,10 +311,6 @@ Yes, but they may not be the last version of them.
 </p>
 </details>
 
-
-
-
-
 ### Can you upload containers images in GitHub Packages ?
 
 <details><summary>show</summary>
@@ -342,15 +321,6 @@ Yes.
 </p>
 </details>
 
-### Can you upload containers images in GitHub Packages ?
-
-<details><summary>show</summary>
-<p>
-
-Yes.
-
-</p>
-</details>
 
 ### What is the docker command to publish a container image on GitHub Packages ?
 
@@ -360,10 +330,8 @@ Yes.
 ```bash
 docker push ghcr.io/OWNER/IMAGE_NAME:latest
 ```
-
 </p>
 </details>
-
 
 ### What are the (programming) package managers supported by GitHub Packages  ?
 
@@ -392,10 +360,6 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 </p>
 </details>
 
-
-
-
-
 ### Which Action allows to upload an artifact ?
 
 <details><summary>show</summary>
@@ -416,7 +380,8 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 <details><summary>show</summary>
 <p>
 
-You can use upload-artifact and download-artifact
+You can use **upload-artifact** and **download-artifact**
+
 ```yaml
 jobs:
   job1:
