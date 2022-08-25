@@ -277,6 +277,118 @@ steps:
 
 ## Author and maintain actions
 
+### What are the three types of custom Actions you can create ?
+
+<details><summary>show</summary>
+<p>
+
+- Docker
+- JavaScript
+- Composite Actions
+
+</p>
+</details>
+
+### Which file containing metadata is mandatory ?
+
+<details><summary>show</summary>
+<p>
+
+The metadata filename must be either action.yml or action.yaml
+
+</p>
+</details>
+
+### Which fields are mandatory in the metadata file ?
+
+- [ ] name
+- [ ] description
+- [ ] version
+- [ ] inputs
+- [ ] author
+
+<details><summary>show</summary>
+<p>
+
+**Name** and **description**. **Inputs** and **author** are optional. **Version** does not exist
+
+</p>
+</details>
+
+### How do you return values from your GitHub Actions ?
+
+<details><summary>show</summary>
+<p>
+
+By defining outputs variables:
+
+```yaml
+outputs:
+  sum: # id of the output
+    description: 'The sum of the inputs'
+```
+
+</p>
+</details>
+
+### How can you customize the icon and the background color of your custom GitHub Action ?
+
+<details><summary>show</summary>
+<p>
+
+By defining a branding section in the metadata file:
+
+```yaml
+branding:
+  icon: 'award'  
+  color: 'green'
+```
+
+</p>
+</details>
+
+### You want to create a custom JavaScript Action. What is the name of the main JavaScript file ?
+
+<details><summary>show</summary>
+<p>
+
+Whatever you want as long as the name is specified in the action.yaml file:
+
+```yaml
+name: 'Hello World by me' # name of the action (mandatory)
+description: 'Says hello to someone' #  simple description (mandatory)
+author: 'Louis-Guillaume MORAND' # author (optional)
+runs:
+  using: 'node12' 
+  main: 'index.js'
+```
+
+</p>
+</details>
+
+### Which ones are prerequisites to publish an action in the marketplace ?
+
+- [ ] The action must be in a public repository.
+- [ ] Each repository must contain a single action.
+- [ ] The action's metadata file (action.yml or action.yaml) must be in the root directory of the repository.
+- [ ] The name in the action's metadata file must be unique.
+
+<details><summary>show</summary>
+<p>
+
+ALL of them [see documentation](https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace#about-publishing-actions).
+</p>
+</details>
+
+### Which is the first step to publish an action in the marketplace ?
+
+<details><summary>show</summary>
+<p>
+
+To create a **Release**.
+</p>
+</details>
+
 ## Manage GitHub Actions for the enterprise
 
 ### Can you prevent users to use Actions from the marketplace ?

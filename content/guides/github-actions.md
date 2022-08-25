@@ -9,7 +9,7 @@
 
 ## Learning path
 
-I recommend the book "GitHub Actions : a practical guide" (exists in [english](https://www.amazon.com/GitHub-Actions-practical-Louis-Guillaume-MORAND-ebook/dp/B09D3Z3Y48) or [french](https://www.amazon.fr/GitHub-Actions-pratique-Louis-Guillaume-MORAND/dp/2957832941/)). As an alternative, there is a [Microsoft Learn path](https://docs.microsoft.com/en-us/learn/paths/automate-workflow-github-actions/).
+I recommend the book "GitHub Actions : a practical guide" (exists in [english](https://www.amazon.com/GitHub-Actions-practical-Louis-Guillaume-MORAND-ebook/dp/B09D3Z3Y48) or [french](https://www.amazon.fr/GitHub-Actions-pratique-Louis-Guillaume-MORAND/dp/2957832941/)). As an alternative, there is a [Microsoft Learn path](https://docs.microsoft.com/en-us/learn/paths/automate-workflow-github-actions/) but it does **not** cover everything such as authoring custom GitHub Actions.
 
 In addition, I recommend [this module](https://docs.microsoft.com/en-us/learn/modules/manage-github-actions-enterprise/introduction) which is not in the learning path but present in the exam.
 
