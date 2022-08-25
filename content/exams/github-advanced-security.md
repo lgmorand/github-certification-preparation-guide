@@ -95,15 +95,15 @@ Yes. A lot of [providers formats](https://docs.github.com/en/code-security/secre
 
 ### Which branch(s) is (are) scanned to detect the secrets ?
 
-- the main/master branch
-- the default branch
-- the active branch (last 30 days)
-- all the branchs
+- [ ] the main/master branch
+- [ ] the default branch
+- [ ] the active branch (last 30 days)
+- [ ] all the branchs
 
 <details><summary>show</summary>
 <p>
 
-ALL the branchs
+All the branchs
 
 </p>
 </details>
@@ -143,7 +143,7 @@ Yes, you can add up to 100 custom patterns for a private repository and 500 for 
 <details><summary>show</summary>
 <p>
 
-No, or you need a local software to scan pre-commit.
+No, or you need a local software to scan the code before the commit (pre-commit).
 
 </p>
 </details>
@@ -450,10 +450,6 @@ When deleting an alert:
 
 </p>
 </details>
-
-    Add the CodeQL workflow to your repository. This uses the github/codeql-action to run the CodeQL CLI.
-    Run the CodeQL CLI directly in an external CI system and upload the results to GitHub.
-
 
 ## Describe GitHub Advanced Security best practices, results, and how to take corrective measures
 

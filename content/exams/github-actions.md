@@ -115,7 +115,7 @@ steps:
   - uses: github/my-action@734713bc047d87bf7eac9674765ae793478c50d3
 ```
 
-The branch name is not secure as it can change at anytime. The version (using semver) is most secure IF the developer never overwrite a previous version
+The branch name is not secure as it can change at anytime. The version (using semver) is most secure IF the developer never overwrite a previous version/tag
 </p>
 </details>
 
@@ -124,8 +124,21 @@ The branch name is not secure as it can change at anytime. The version (using se
 <details><summary>show</summary>
 <p>
 
-```yaml
+There are different steps. First you need to create an **Environment** (let's call it "dev").
 
+Then, in this environment you need to define **protection rules** and especially the rule "Required reviewers"
+
+Finally, you need for the job you want an approval for, to reference the newly created/configured environment :
+
+```yaml
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+
+  deploy-dev:
+    runs-on: 'ubuntu-latest'
+    environment: 'dev'
 ```
 
 </p>
@@ -154,6 +167,23 @@ The branch name is not secure as it can change at anytime. The version (using se
 </details>
 
 ### How many combinations are created with the following matrix  ?
+
+```yaml
+jobs:
+  example_matrix:
+    strategy:
+      matrix:
+        version: [10, 12, 14]
+        os: [ubuntu-latest, windows-latest]
+```
+
+<details><summary>show</summary>
+<p>
+
+6 combinations
+  
+</p>
+</details>
 
 ### Which variable contains the name of the repository and the name of the owner ?
 
@@ -192,9 +222,7 @@ The branch name is not secure as it can change at anytime. The version (using se
 <details><summary>show</summary>
 <p>
 
-```yaml
-
-```
+No. Which means that a file/anything created by a job, cannot be retrieved by a second job automatically.
 
 </p>
 </details>
@@ -218,37 +246,6 @@ steps:
 </p>
 </details>
 
-
-### How to call a variable which has been defined as a secret ?
-
-<details><summary>show</summary>
-<p>
-
-```yaml
-
-```
-
-</p>
-</details>
-
-
-```yaml
-jobs:
-  example_matrix:
-    strategy:
-      matrix:
-        version: [10, 12, 14]
-        os: [ubuntu-latest, windows-latest]
-```
-
-<details><summary>show</summary>
-<p>
-
-6 combinations
-  
-</p>
-</details>
-
 ### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM ?
 
 <details><summary>show</summary>
@@ -260,7 +257,7 @@ You need to use a "route" by specifying the labels you want to target:
 runs-on: [self-hosted, linux, ARM64]
 ```
 
-### You have a workflow secret named MY_SECRET. What if the format to call it from the workflow ?
+### You have a workflow secret named MY_SECRET. What is the format to call it from the workflow ?
 
 <details><summary>show</summary>
 <p>
@@ -284,11 +281,10 @@ steps:
 <details><summary>show</summary>
 <p>
 
-Yes, using Policies and restricting to local actions only.
+Yes, using **Policies** and restricting to local actions only.
 
 </p>
 </details>
-
 
 ### Can you allow users to only used actions created by GitHub or verified creators ?
 
@@ -299,7 +295,6 @@ Yes, using Policies and restricting to specific actions (menu "Allow select acti
 
 </p>
 </details>
-
 
 ### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
 
@@ -321,7 +316,6 @@ Yes.
 </p>
 </details>
 
-
 ### What is the docker command to publish a container image on GitHub Packages ?
 
 <details><summary>show</summary>
@@ -330,6 +324,7 @@ Yes.
 ```bash
 docker push ghcr.io/OWNER/IMAGE_NAME:latest
 ```
+
 </p>
 </details>
 
@@ -348,9 +343,9 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 
 ### In which scenarios should you NOT use GitHub Packages ?
 
-- When I want to share code between methods of my application.
-- When I want to share container images among developers of your team.
-- When I want to publish a small code library as an open-source project.
+- [ ] When I want to share code between methods of my application.
+- [ ] When I want to share container images among developers of your team.
+- [ ] When I want to publish a small code library as an open-source project.
 
 <details><summary>show</summary>
 <p>
