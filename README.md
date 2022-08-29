@@ -25,3 +25,8 @@ Absolutely! Feel free to PR and edit/add questions and solutions, but please sti
 ## Can I fork it?
 
 Yes, of course, but **only** if you plan to do a pull-request to contribute. If you want to keep it as a bookmark, just star it to let people easily find the original one.
+
+
+## Author(s)
+
+Louis-Guillaume MORAND
