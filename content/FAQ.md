@@ -3,7 +3,7 @@
 ## How do I register for a certification ?
 
 You need sign up on [https://examregistration.github.com](https://examregistration.github.com) and shedule an exam. Be
-> Be aware that for the moment, certifications are open to GitHub/Microsoft employees and GitHub/Microsoft partners only. If you want your organization to be onboarded, please contact certificat@github.com.
+> Be aware that for the moment, certifications are open to GitHub/Microsoft employees and GitHub/Microsoft partners only. If you want your organization to be onboarded, please contact certification@github.com.
 
 ## How does it cost ?
 

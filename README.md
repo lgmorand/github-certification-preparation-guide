@@ -10,8 +10,8 @@ This guide covers three certifications:
 - GitHub Advanced Security
 - GitHub Administration
 
-> Be aware that for the moment, certifications are open to GitHub/Microsoft employees and GitHub/Microsoft partners only. If you want your organization to be onboarded, please contact certificat@github.com.
-> 
+> Be aware that for the moment, certifications are open to GitHub/Microsoft employees and GitHub/Microsoft partners only. If you want your organization to be onboarded, please contact certification@github.com. They **should** be open to everybody next year
+
 You will find **[guides and test exams here](content/readme.md).**
 
 <img src="./content/media/force.jpg"  width="1173"/>
@@ -25,7 +25,6 @@ Absolutely! Feel free to PR and edit/add questions and solutions, but please sti
 ## Can I fork it?
 
 Yes, of course, but **only** if you plan to do a pull-request to contribute. If you want to keep it as a bookmark, just star it to let people easily find the original one.
-
 
 ## Author(s)
 
