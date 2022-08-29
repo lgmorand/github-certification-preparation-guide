@@ -10,6 +10,8 @@ This guide covers three certifications:
 - GitHub Advanced Security
 - GitHub Administration
 
+> Be aware that for the moment, certifications are open to GitHub/Microsoft employees and GitHub/Microsoft partners only. If you want your organization to be onboarded, please contact certificat@github.com.
+> 
 You will find **[guides and test exams here](content/readme.md).**
 
 <img src="./content/media/force.jpg"  width="1173"/>
