@@ -4,17 +4,16 @@
 
 A set of resources that helped me prepare for the different GitHub certifications, organized by curriculum domain. They may as well serve as learning and practicing with GitHub.
 
-This guide covers three certifications:
+This guide covers four certifications:
 
+- GitHub Foundations
 - GitHub Actions
 - GitHub Advanced Security
 - GitHub Administration
 
-> Be aware that for the moment, certifications are open to GitHub/Microsoft employees and GitHub/Microsoft partners only. If you want your organization to be onboarded, please contact certification@github.com. They **should** be open to everybody next year
-
 You will find **[guides and test exams here](content/readme.md).**
 
-<img src="./content/media/force.jpg"  width="1173"/>
+<img src="./content/media/badges.png"  width="1173"/>
 
 ---
 
