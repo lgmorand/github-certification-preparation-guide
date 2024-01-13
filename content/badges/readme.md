@@ -1,5 +1,4 @@
-These are NOT official badges. They do not exist yet so I did them for my personal use.
-
-Be careful if you want to use them
-
-Louis-Guillaume MORAND
+![GitHub Foundations](github-foundations.png)
+![GitHub Actions](github-actions.png)
+![GitHub Administration](github-administration.png)
+![GitHub Security](github-security.png)
