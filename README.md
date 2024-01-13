@@ -13,7 +13,8 @@ This guide covers four certifications:
 
 You will find **[guides and test exams here](content/readme.md).**
 
-<img src="./content/media/badges.png"  width="1173"/>
+[![Badges](content/media/badges.png)](content/readme.md)
+
 
 ---
 
