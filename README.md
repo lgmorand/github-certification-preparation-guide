@@ -15,7 +15,6 @@ You will find **[guides and test exams here](content/readme.md).**
 
 [![Badges](content/media/badges.png)](content/readme.md)
 
-
 ---
 
 ## Can I PR? There is an error/an alternative way/an extra question/solution I can offer
@@ -29,3 +28,7 @@ Yes, of course, but **only** if you plan to do a pull-request to contribute. If 
 ## Author(s)
 
 Louis-Guillaume MORAND
+
+## Contributors
+
+- [Vatcharat Rattananun (Jack)](https://github.com/gamertense)
