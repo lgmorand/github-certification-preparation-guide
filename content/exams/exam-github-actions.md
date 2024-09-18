@@ -416,7 +416,9 @@ Yes, using Policies and restricting to specific actions (menu "Allow select acti
 <details><summary>show</summary>
 <p>
 
-Yes, but they may not be the last version of them.
+No, GitHub Actions are not automatically enabled on GitHub Enterprise Server by default. To use GitHub Actions on GitHub Enterprise Server, administrators need to enable and configure them manually. This involves ensuring that the server has adequate CPU and memory resources, setting up storage for artifacts and caches, and adding self-hosted runners to execute workflows.
+
+> Reference: [GitHub Docs](https://docs.github.com/en/enterprise-server@3.14/admin/managing-github-actions-for-your-enterprise/getting-started-with-github-actions-for-your-enterprise/getting-started-with-github-actions-for-github-enterprise-server#about-github-actions-on-github-enterprise-server)
 
 </p>
 </details>
