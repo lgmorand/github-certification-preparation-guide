@@ -14,7 +14,7 @@
 
 ## Support GitHub Enterprise for users and key stakeholders
 
-### What role is required to edit a team ?
+### What role is required to edit a team?
 
 <details><summary>show</summary>
 <p>
@@ -24,17 +24,17 @@
 </p>
 </details>
 
-### Can you have nested teams in GitHub ?
+### Can you have nested teams in GitHub?
 
 <details><summary>show</summary>
 <p>
 
-Yes and it is a general pratice [to use them to reflect](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams#nested-teams) the current enterprise internal's organization.
+Yes and it is a general practice [to use them to reflect](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams#nested-teams) the current enterprise internal's organization.
 
 </p>
 </details>
 
-### Which format are available when exporting audit logs ?
+### Which formats are available when exporting audit logs?
 
 <details><summary>show</summary>
 <p>
@@ -44,7 +44,7 @@ Yes and it is a general pratice [to use them to reflect](https://docs.github.com
 </p>
 </details>
 
-### Which roles can be used to manage billing information ?
+### Which roles can be used to manage billing information?
 
 <details><summary>show</summary>
 <p>
@@ -54,7 +54,7 @@ Yes and it is a general pratice [to use them to reflect](https://docs.github.com
 </p>
 </details>
 
-### On GitHub Enterprise Server, which command lines allows to generate a logs package to communicate to the support ?
+### On GitHub Enterprise Server, which command allows you to generate a logs package to communicate to the support?
 
 <details><summary>show</summary>
 <p>
@@ -68,17 +68,17 @@ ssh -p 122 admin@hostname -- 'ghe-support-bundle -o' > support-bundle.tgz
 
 ## Manage user identities and GitHub authentication
 
-### Can be GitHub synchronized with an identity provider ?
+### Can GitHub be synchronized with an identity provider?
 
 <details><summary>show</summary>
 <p>
 
-Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, etc
+Yes, for instance, Azure Active Directory but also others like ADFS, Okta, OneLogin, etc.
 
 </p>
 </details>
 
-### What are the different methods to authenticate against GitHub ?
+### What are the different methods to authenticate against GitHub?
 
 <details><summary>show</summary>
 <p>
@@ -91,7 +91,7 @@ Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, e
 </p>
 </details>
 
-### Which authentication mechanism allow user to connect using their company's credentials ?
+### Which authentication mechanism allows users to connect using their company's credentials?
 
 <details><summary>show</summary>
 <p>
@@ -101,7 +101,7 @@ Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, e
 </p>
 </details>
 
-### What are the supported 2FA (multi factor authentication) methods ?
+### What are the supported 2FA (multi-factor authentication) methods?
 
 <details><summary>show</summary>
 <p>
@@ -113,7 +113,7 @@ Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, e
 </p>
 </details>
 
-### Which feature allow to synchronize exchange of user identity data between your Idp and GitHub ?
+### Which feature allows you to synchronize exchange of user identity data between your IdP and GitHub?
 
 <details><summary>show</summary>
 <p>
@@ -123,7 +123,7 @@ Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, e
 </p>
 </details>
 
-### What is the limit number of user in one GitHub organization ?
+### What is the limit number of users in one GitHub organization?
 
 <details><summary>show</summary>
 <p>
@@ -139,22 +139,22 @@ Yes, for instance, Azure Active Directory but other like ADFS, Okta, OneLogin, e
 
 ## Describe how GitHub is deployed, distributed, and licensed
 
-### Can an enterprise contain several organizations  ?
+### Can an enterprise contain several organizations?
 
 <details><summary>show</summary>
 <p>
 
-yes.
+Yes.
 
 </p>
 </details>
 
-### Are the hosted agents totally free ?
+### Are the hosted agents totally free?
 
 <details><summary>show</summary>
 <p>
 
-Yes for public repositories. For private repositories, you have free minutes of usage offered per month
+Yes for public repositories. For private repositories, you have free minutes of usage offered per month.
 
 </p>
 </details>
@@ -164,12 +164,12 @@ Yes for public repositories. For private repositories, you have free minutes of 
 <details><summary>show</summary>
 <p>
 
-macOS. It cost 10 times (in terms of minute of compute) the price of a linux minute
+macOS. It costs 10 times (in terms of minutes of compute) the price of a Linux minute.
 
 </p>
 </details>
 
-### What are the different types of support of Enterprise Support ?
+### What are the different types of support for Enterprise Support?
 
 <details><summary>show</summary>
 <p>
@@ -181,7 +181,7 @@ macOS. It cost 10 times (in terms of minute of compute) the price of a linux min
 </p>
 </details>
 
-### What kind of info can you find using Audit Log API ?
+### What kind of info can you find using the Audit Log API?
 
 <details><summary>show</summary>
 <p>
@@ -195,39 +195,39 @@ macOS. It cost 10 times (in terms of minute of compute) the price of a linux min
 </p>
 </details>
 
-### Does the support covers account, server, and security issues ?
+### Does the support cover account, server, and security issues?
 
 <details><summary>show</summary>
 <p>
 
-No, it covers Account, Security, and Abuse issues
+No, it covers Account, Security, and Abuse issues.
 
 </p>
 </details>
 
-### Does GitHub Enterprise Server contains GitHub Actions feature ?
+### Does GitHub Enterprise Server contain the GitHub Actions feature?
 
 <details><summary>show</summary>
 <p>
 
-Yes. It is disabled by default but it's here and it contains already some built-in actions created by GitHub. It does NOT require acces to Internet to work because you can sync/download the Actions locally.
+Yes. It is disabled by default but it's there and it contains already some built-in actions created by GitHub. It does NOT require access to Internet to work because you can sync/download the Actions locally.
 
 </p>
 </details>
 
-### Does GitHub Enterprise Server contains GitHub Packages feature?
+### Does GitHub Enterprise Server contain the GitHub Packages feature?
 
 <details><summary>show</summary>
 <p>
 
-yes
+Yes.
 
 </p>
 </details>
 
 ## Manage access and permissions based on membership
 
-### What are the two roles available at team level  ?
+### What are the two roles available at the team level?
 
 <details><summary>show</summary>
 <p>
@@ -238,7 +238,7 @@ yes
 </p>
 </details>
 
-### What are the three roles available at organization level  ?
+### What are the three roles available at the organization level?
 
 <details><summary>show</summary>
 <p>
@@ -251,17 +251,17 @@ yes
 </details>
 
 
-### Which role access should you give to a contributor with full control on the repo except access to sensitive or destructive actions  ?
+### Which role access should you give to a contributor with full control on the repo except access to sensitive or destructive actions?
 
 <details><summary>show</summary>
 <p>
 
-**maintainer** because **admin** role would for instance allow to delete a repo
+**maintainer** because **admin** role would for instance allow to delete a repo.
 
 </p>
 </details>
 
-### What is the appropriate repository permission level for contributors who will actively push changes to your repository
+### What is the appropriate repository permission level for contributors who will actively push changes to your repository?
 
 <details><summary>show</summary>
 <p>
@@ -271,17 +271,17 @@ yes
 </p>
 </details>
 
-### By default, can all users of an organization see all repositories ?
+### By default, can all users of an organization see all repositories?
 
 <details><summary>show</summary>
 <p>
 
-Yes if the "Read" access is defined as default role in "base permissions" in the organization's settings
+Yes if the "Read" access is defined as default role in "base permissions" in the organization's settings.
 
 </p>
 </details>
 
-### Which role allows a person to manage issues of a repository without any write rights ?
+### Which role allows a person to manage issues of a repository without any write rights?
 
 <details><summary>show</summary>
 <p>
@@ -291,7 +291,7 @@ Yes if the "Read" access is defined as default role in "base permissions" in the
 </p>
 </details>
 
-### What is a deploy key ?
+### What is a deploy key?
 
 <details><summary>show</summary>
 <p>
@@ -303,7 +303,7 @@ You can launch projects from a repository on GitHub.com to your server by using 
 
 ## Enable secure software development and ensure compliance
 
-### How can you exclude sensitive files from your repository ?
+### How can you exclude sensitive files from your repository?
 
 <details><summary>show</summary>
 <p>
@@ -313,17 +313,17 @@ One technique to help avoid the majority of this risk is to build and maintain *
 </p>
 </details>
 
-### Once a sensitive data has been commited, can you erase the history to keep the data secret again ?
+### Once sensitive data has been committed, can you erase the history to keep the data secret again?
 
 <details><summary>show</summary>
 <p>
 
-**No**. You can overwrite a commit but you must consider the data unsecure once it has been commited. If it's a secret/password, then you must renew it.
+**No**. You can overwrite a commit but you must consider the data insecure once it has been committed. If it's a secret/password, then you must renew it.
 
 </p>
 </details>
 
-### What is the starting point to enforce certain workflows like passing security checks ?
+### What is the starting point to enforce certain workflows like passing security checks?
 
 <details><summary>show</summary>
 <p>
@@ -333,7 +333,7 @@ You should use [branch protection rules](https://docs.github.com/en/repositories
 </p>
 </details>
 
-### How can you automatically assign specific persons as reviewers when a part of the code is modified ?
+### How can you automatically assign specific persons as reviewers when a part of the code is modified?
 
 <details><summary>show</summary>
 <p>
@@ -343,7 +343,7 @@ You should use [CODEOWNERS](https://docs.github.com/en/repositories/managing-you
 </p>
 </details>
 
-### What is the simplest way to prevent the creation of public repository  ?
+### What is the simplest way to prevent the creation of public repositories?
 
 <details><summary>show</summary>
 <p>
@@ -353,7 +353,7 @@ At the organization level, in "Member privileges" settings, disallow the creatio
 </p>
 </details>
 
-### If you plan to communicate about your security policy, like disclosing vulnerabilities, where should you store your policy publicly ?
+### If you plan to communicate about your security policy, like disclosing vulnerabilities, where should you store your policy publicly?
 
 <details><summary>show</summary>
 <p>
@@ -364,7 +364,7 @@ In the root of your repository in a file named SECURITY.md.
 </details>
 
 
-### Using branch protection rule, which setting prevents merge commits ?
+### Using branch protection rules, which setting prevents merge commits?
 
 <details><summary>show</summary>
 <p>
@@ -374,7 +374,7 @@ In the root of your repository in a file named SECURITY.md.
 </p>
 </details>
 
-### In which part of your repository can you find the dependency graph listing all the packages your repo depends on ?
+### In which part of your repository can you find the dependency graph listing all the packages your repo depends on?
 
 <details><summary>show</summary>
 <p>
@@ -384,7 +384,7 @@ In the **Insights** tab and then **Dependency graph**.
 </details>
 
 
-### Which feature of GitHub scan your repo and alerts you in case of detected vulnerabilities in your dependencies ?
+### Which feature of GitHub scans your repo and alerts you in case of detected vulnerabilities in your dependencies?
 
 <details><summary>show</summary>
 <p>
@@ -394,7 +394,7 @@ In the **Insights** tab and then **Dependency graph**.
 </details>
 
 
-### Which feature of GitHub scan your repo and alerts you in case of detected vulnerabilities and automatically create a pull request to fix it ?
+### Which feature of GitHub scans your repo and alerts you in case of detected vulnerabilities and automatically creates a pull request to fix it?
 
 <details><summary>show</summary>
 <p>
@@ -403,17 +403,17 @@ In the **Insights** tab and then **Dependency graph**.
 </p>
 </details>
 
-### What is the feature which help to prevent to commit a secret ?
+### What is the feature which helps to prevent committing a secret?
 
 <details><summary>show</summary>
 <p>
 
-If you want to act **before** a commit, you must use pre-commit hook which allow to scan the code before the commit.
+If you want to act **before** a commit, you must use a pre-commit hook which allows you to scan the code before the commit.
 
 </p>
 </details>
 
-### Which tools can be used to tamper Git history and erase sensitive data ?
+### Which tools can be used to tamper with Git history and erase sensitive data?
 
 <details><summary>show</summary>
 <p>
@@ -423,7 +423,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 </p>
 </details>
 
-### Which two pieces of information should be included in a security advisory ?
+### Which two pieces of information should be included in a security advisory?
 
 <details><summary>show</summary>
 <p>
@@ -433,7 +433,7 @@ If you want to act **before** a commit, you must use pre-commit hook which allow
 </p>
 </details>
 
-### You have a workflow secret named MY_SECRET. What if the format to call it from the workflow ?
+### You have a workflow secret named MY_SECRET. What is the format to call it from the workflow?
 
 <details><summary>show</summary>
 <p>
@@ -450,20 +450,20 @@ steps:
 
 ## Manage GitHub Actions
 
-### Which two files are mandatory when create a workflow template ?
+### Which two files are mandatory when creating a workflow template?
 
 <details><summary>show</summary>
 <p>
 
 - a workflow file with a yml extension (**my-workflow**.yml)
-- a propertires files with ".properties.json" extention (**my-workflow**.properties.json)
+- a properties file with ".properties.json" extension (**my-workflow**.properties.json)
 
 Both files must have the same name.
 
 </p>
 </details>
 
-### Which placeholder keyword allow to inject the current default branch in a workflow template ?
+### Which placeholder keyword allows you to inject the current default branch in a workflow template?
 
 <details><summary>show</summary>
 <p>
@@ -479,7 +479,7 @@ on:
 </p>
 </details>
 
-### Can you prevent users to use Actions from the marketplace ?
+### Can you prevent users from using Actions from the marketplace?
 
 <details><summary>show</summary>
 <p>
@@ -489,7 +489,7 @@ Yes, using Policies and restricting to local actions only.
 </p>
 </details>
 
-### Can you allow users to only used actions created by GitHub or verified creators ?
+### Can you allow users to only use actions created by GitHub or verified creators?
 
 <details><summary>show</summary>
 <p>
@@ -499,7 +499,7 @@ Yes, using Policies and restricting to specific actions (menu "Allow select acti
 </p>
 </details>
 
-### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
+### Are the Actions created by GitHub automatically present in GitHub Enterprise Server?
 
 <details><summary>show</summary>
 <p>
@@ -509,17 +509,17 @@ Yes, but they may not be the last version of them.
 </p>
 </details>
 
-### Which feature allow to provide already premade templaces to users when they want to create a workflow ?
+### Which feature allows you to provide pre-made templates to users when they want to create a workflow?
 
 <details><summary>show</summary>
 <p>
 
-It's called a **workflow template**
+It's called a **workflow template**.
 
 </p>
 </details>
 
-### What are the default labels applied to a self-hosted agent ?
+### What are the default labels applied to a self-hosted agent?
 
 <details><summary>show</summary>
 <p>
@@ -531,7 +531,7 @@ It's called a **workflow template**
 </p>
 </details>
 
-### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM ?
+### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM?
 
 <details><summary>show</summary>
 <p>
@@ -543,7 +543,7 @@ runs-on: [self-hosted, linux, ARM64]
 </p>
 </details>
 
-### In which folder of a self-hosted agent can you find logs to debug the behavior of the runner ?
+### In which folder of a self-hosted agent can you find logs to debug the behavior of the runner?
 
 <details><summary>show</summary>
 <p>
@@ -555,7 +555,7 @@ In the *_diag* folder.
 
 ## Manage GitHub Packages
 
-### Can you upload containers images in GitHub Packages ?
+### Can you upload container images in GitHub Packages?
 
 <details><summary>show</summary>
 <p>
@@ -565,7 +565,7 @@ Yes.
 </p>
 </details>
 
-### What is the docker command to publish a container image on GitHub Packages ?
+### What is the Docker command to publish a container image on GitHub Packages?
 
 <details><summary>show</summary>
 <p>
@@ -577,12 +577,12 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 </p>
 </details>
 
-### What are the (programming) package managers supported by GitHub Packages  ?
+### What are the (programming) package managers supported by GitHub Packages?
 
 <details><summary>show</summary>
 <p>
 
-- npm, a NodeJS package manager
+- npm, a Node.js package manager
 - NuGet, the .NET package manager
 - RubyGems
 - Maven and Gradle, two package managers for Java
@@ -590,7 +590,7 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 </p>
 </details>
 
-### In which scenarios should you NOT use GitHub Packages ?
+### In which scenarios should you NOT use GitHub Packages?
 
 - [ ] When I want to share code between methods of my application.
 - [ ] When I want to share container images among developers of your team.

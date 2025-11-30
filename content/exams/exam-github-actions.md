@@ -11,7 +11,7 @@
 
 ## Author and maintain workflows
 
-### How to trigger a workflow when a commit is done on the main branch ?
+### How do you trigger a workflow when a commit is done on the main branch?
 
 <details><summary>show</summary>
 <p>
@@ -26,7 +26,7 @@ on:
 </p>
 </details>
 
-### How to trigger a workflow when a pull request is done on the main branch ?
+### How do you trigger a workflow when a pull request is done on the main branch?
 
 <details><summary>show</summary>
 <p>
@@ -41,7 +41,7 @@ on:
 </p>
 </details>
 
-### What is the keyword to ensure a job must run after another successful job ?
+### What is the keyword to ensure a job must run after another successful job?
 
 <details><summary>show</summary>
 <p>
@@ -60,7 +60,7 @@ jobs:
 </p>
 </details>
 
-### In which folder must be placed your workflows's YAML files?
+### In which folder must your workflow YAML files be placed?
 
 <details><summary>show</summary>
 <p>
@@ -72,7 +72,7 @@ jobs:
 </p>
 </details>
 
-### Suppose you have created a bug fix on a new branch and want it to become part of the next production build generated from the main branch. What should you do next? ?
+### Suppose you have created a bug fix on a new branch and want it to become part of the next production build generated from the main branch. What should you do next?
 
 <details><summary>show</summary>
 <p>
@@ -82,7 +82,7 @@ Create a pull request to merge your new branch into the main branch.
 </p>
 </details>
 
-### What is the keyword to specify the operating system on which the job will be executed ?
+### What is the keyword to specify the operating system on which the job will be executed?
 
 <details><summary>show</summary>
 <p>
@@ -101,7 +101,7 @@ jobs:
 
 ## Consume workflows
 
-### What are the two "secure" ways to call a specific version of an Action
+### What are the two "secure" ways to call a specific version of an Action?
 
 <details><summary>show</summary>
 <p>
@@ -119,7 +119,7 @@ The branch name is not secure as it can change at anytime. The version (using se
 </p>
 </details>
 
-### How to create a manual approval step in a workflow ?
+### How do you create a manual approval step in a workflow?
 
 <details><summary>show</summary>
 <p>
@@ -156,7 +156,7 @@ jobs:
 </p>
 </details>
 
-### Which trigger allows to start a workflow manually ?
+### Which trigger allows you to start a workflow manually?
 
 <details><summary>show</summary>
 <p>
@@ -166,7 +166,7 @@ jobs:
 </p>
 </details>
 
-### How many combinations are created with the following matrix  ?
+### How many combinations are created with the following matrix?
 
 ```yaml
 jobs:
@@ -185,7 +185,7 @@ jobs:
 </p>
 </details>
 
-### Which variable contains the name of the repository and the name of the owner ?
+### Which variable contains the name of the repository and the name of the owner?
 
 <details><summary>show</summary>
 <p>
@@ -195,7 +195,7 @@ jobs:
 </p>
 </details>
 
-### Which variable contains the name of the user who triggered the workflow ?
+### Which variable contains the name of the user who triggered the workflow?
 
 <details><summary>show</summary>
 <p>
@@ -205,19 +205,19 @@ jobs:
 </p>
 </details>
 
-### Which variable contains the name of the branch or tag which triggered the current workflow ?
+### Which variable contains the name of the branch or tag which triggered the current workflow?
 
 <details><summary>show</summary>
 <p>
 
 **GITHUB_REF_NAME**
 
-/!\ GITHUB_REF will contains the full name (*refs/heads/<branch_name>*)
+Note: GITHUB_REF will contain the full name (*refs/heads/<branch_name>*)
 
 </p>
 </details>
 
-### Do the jobs of a workflow run on the same machine ?
+### Do the jobs of a workflow run on the same machine?
 
 <details><summary>show</summary>
 <p>
@@ -227,7 +227,7 @@ No. Which means that a file/anything created by a job, cannot be retrieved by a 
 </p>
 </details>
 
-### What are the three different ways to call a version of an Action
+### What are the three different ways to call a version of an Action?
 
 <details><summary>show</summary>
 <p>
@@ -246,7 +246,7 @@ steps:
 </p>
 </details>
 
-### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM ?
+### How do you enforce your workflow running on a specific self-hosted agent running on Linux with ARM?
 
 <details><summary>show</summary>
 <p>
@@ -260,7 +260,7 @@ runs-on: [self-hosted, linux, ARM64]
 </p>
 </details>
 
-### You have a workflow secret named MY_SECRET. What is the format to call it from the workflow ?
+### You have a workflow secret named MY_SECRET. What is the format to call it from the workflow?
 
 <details><summary>show</summary>
 <p>
@@ -277,7 +277,7 @@ steps:
 
 ## Author and maintain actions
 
-### What are the three types of custom Actions you can create ?
+### What are the three types of custom Actions you can create?
 
 <details><summary>show</summary>
 <p>
@@ -289,7 +289,7 @@ steps:
 </p>
 </details>
 
-### Which file containing metadata is mandatory ?
+### Which file containing metadata is mandatory?
 
 <details><summary>show</summary>
 <p>
@@ -299,7 +299,7 @@ The metadata filename must be either action.yml or action.yaml
 </p>
 </details>
 
-### Which fields are mandatory in the metadata file ?
+### Which fields are mandatory in the metadata file?
 
 - [ ] name
 - [ ] description
@@ -315,12 +315,12 @@ The metadata filename must be either action.yml or action.yaml
 </p>
 </details>
 
-### How do you return values from your GitHub Actions ?
+### How do you return values from your GitHub Actions?
 
 <details><summary>show</summary>
 <p>
 
-By defining outputs variables:
+By defining output variables:
 
 ```yaml
 outputs:
@@ -331,7 +331,7 @@ outputs:
 </p>
 </details>
 
-### How can you customize the icon and the background color of your custom GitHub Action ?
+### How can you customize the icon and the background color of your custom GitHub Action?
 
 <details><summary>show</summary>
 <p>
@@ -347,7 +347,7 @@ branding:
 </p>
 </details>
 
-### You want to create a custom JavaScript Action. What is the name of the main JavaScript file ?
+### You want to create a custom JavaScript Action. What is the name of the main JavaScript file?
 
 <details><summary>show</summary>
 <p>
@@ -366,7 +366,7 @@ runs:
 </p>
 </details>
 
-### Which ones are prerequisites to publish an action in the marketplace ?
+### Which ones are prerequisites to publish an action in the marketplace?
 
 - [ ] The action must be in a public repository.
 - [ ] Each repository must contain a single action.
@@ -380,7 +380,7 @@ ALL of them [see documentation](https://docs.github.com/en/actions/creating-acti
 </p>
 </details>
 
-### Which is the first step to publish an action in the marketplace ?
+### What is the first step to publish an action in the marketplace?
 
 <details><summary>show</summary>
 <p>
@@ -391,7 +391,7 @@ To create a **Release**.
 
 ## Manage GitHub Actions for the enterprise
 
-### Can you prevent users to use Actions from the marketplace ?
+### Can you prevent users from using Actions from the marketplace?
 
 <details><summary>show</summary>
 <p>
@@ -401,7 +401,7 @@ Yes, using **Policies** and restricting to local actions only.
 </p>
 </details>
 
-### Can you allow users to only used actions created by GitHub or verified creators ?
+### Can you allow users to only use actions created by GitHub or verified creators?
 
 <details><summary>show</summary>
 <p>
@@ -411,7 +411,7 @@ Yes, using Policies and restricting to specific actions (menu "Allow select acti
 </p>
 </details>
 
-### Are the Actions created by GitHub automatically present in GitHub Enterprise Server ?
+### Are the Actions created by GitHub automatically present in GitHub Enterprise Server?
 
 <details><summary>show</summary>
 <p>
@@ -423,7 +423,7 @@ No, GitHub Actions are not automatically enabled on GitHub Enterprise Server by 
 </p>
 </details>
 
-### Can you upload containers images in GitHub Packages ?
+### Can you upload container images in GitHub Packages?
 
 <details><summary>show</summary>
 <p>
@@ -433,7 +433,7 @@ Yes.
 </p>
 </details>
 
-### What is the docker command to publish a container image on GitHub Packages ?
+### What is the Docker command to publish a container image on GitHub Packages?
 
 <details><summary>show</summary>
 <p>
@@ -445,12 +445,12 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 </p>
 </details>
 
-### What are the (programming) package managers supported by GitHub Packages  ?
+### What are the (programming) package managers supported by GitHub Packages?
 
 <details><summary>show</summary>
 <p>
 
-- npm, a NodeJS package manager
+- npm, a Node.js package manager
 - NuGet, the .NET package manager
 - RubyGems
 - Maven and Gradle, two package managers for Java
@@ -458,7 +458,7 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 </p>
 </details>
 
-### In which scenarios should you NOT use GitHub Packages ?
+### In which scenarios should you NOT use GitHub Packages?
 
 - [ ] When I want to share code between methods of my application.
 - [ ] When I want to share container images among developers of your team.
@@ -472,7 +472,7 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 </p>
 </details>
 
-### Which Action allows to upload an artifact ?
+### Which Action allows you to upload an artifact?
 
 <details><summary>show</summary>
 <p>
@@ -487,7 +487,7 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 </p>
 </details>
 
-### Which Actions allows to pass an file from one job to another ?
+### Which Actions allow you to pass a file from one job to another?
 
 <details><summary>show</summary>
 <p>

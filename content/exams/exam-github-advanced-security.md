@@ -60,7 +60,7 @@ Incorporating security principles early in the software development lifecycle
 </p>
 </details>
 
-### What is the features which provides a safe space for code maintainers to discuss how to best address errors and vulnerabilities found in the codebase ?
+### What is the feature which provides a safe space for code maintainers to discuss how to best address errors and vulnerabilities found in the codebase?
 
 <details><summary>show</summary>
 <p>
@@ -69,7 +69,7 @@ security advisories
 </p>
 </details>
 
-### What are the main security features availables with GitHub Advanced Security ?
+### What are the main security features available with GitHub Advanced Security?
 
 <details><summary>show</summary>
 <p>
@@ -83,7 +83,7 @@ security advisories
 
 ## Configure and use secret scanning
 
-### Can secret scanning detect a specific connection string for a Cloud provider such as Azure or AWS ?
+### Can secret scanning detect a specific connection string for a Cloud provider such as Azure or AWS?
 
 <details><summary>show</summary>
 <p>
@@ -93,22 +93,22 @@ Yes. A lot of [providers formats](https://docs.github.com/en/code-security/secre
 </p>
 </details>
 
-### Which branch(s) is (are) scanned to detect the secrets ?
+### Which branch(es) is (are) scanned to detect the secrets?
 
 - [ ] the main/master branch
 - [ ] the default branch
 - [ ] the active branch (last 30 days)
-- [ ] all the branchs
+- [ ] all the branches
 
 <details><summary>show</summary>
 <p>
 
-All the branchs
+All the branches
 
 </p>
 </details>
 
-### How many days in Git history are scanned ?
+### How many days in Git history are scanned?
 
 <details><summary>show</summary>
 <p>
@@ -118,7 +118,7 @@ ALL history is scanned.
 </p>
 </details>
 
-### In which tab of the repository can you find the detected secrets  ?
+### In which tab of the repository can you find the detected secrets?
 
 <details><summary>show</summary>
 <p>
@@ -128,7 +128,7 @@ In the **Security** > **Secret scanning** screen.
 </p>
 </details>
 
-### Can you add custom patterns to detect specific secrets ?
+### Can you add custom patterns to detect specific secrets?
 
 <details><summary>show</summary>
 <p>
@@ -138,7 +138,7 @@ Yes, you can add up to 100 custom patterns for a private repository and 500 for 
 </p>
 </details>
 
-### Can you prevent a user to commit a secret ?
+### Can you prevent a user from committing a secret?
 
 <details><summary>show</summary>
 <p>
@@ -148,7 +148,7 @@ No, or you need a local software to scan the code before the commit (pre-commit)
 </p>
 </details>
 
-### Can you prevent to push a commit which contain a secret ?
+### Can you prevent pushing a commit which contains a secret?
 
 <details><summary>show</summary>
 <p>
@@ -163,12 +163,12 @@ Yes, you can enable [**push protection**](https://docs.github.com/en/enterprise-
 <details><summary>show</summary>
 <p>
 
-Yes, but then it generates an alert in the Security tab, a bypass even is added to the audit log and an email is sent to org owners, security managers and repo administrators.
+Yes, but then it generates an alert in the Security tab, a bypass event is added to the audit log and an email is sent to org owners, security managers and repo administrators.
 
 </p>
 </details>
 
-### Can secret scanning rotate your detected secret automatically for you ?
+### Can secret scanning rotate your detected secret automatically for you?
 
 <details><summary>show</summary>
 <p>
@@ -178,17 +178,17 @@ No but in some cases, GitHub also notifies the service provider who issued the s
 </p>
 </details>
 
-### Can you have secret scanning for free ?
+### Can you have secret scanning for free?
 
 <details><summary>show</summary>
 <p>
 
-Yes, it is enabled by default on all public repositories. It **cannot be configured or turned off**. Secret scanning **must be enabled manually** on private repositories but it then a paid option.
+Yes, it is enabled by default on all public repositories. It **cannot be configured or turned off**. Secret scanning **must be enabled manually** on private repositories but it is then a paid option.
 
 </p>
 </details>
 
-### What is the best way to enable secrets scanning at scale ?
+### What is the best way to enable secret scanning at scale?
 
 <details><summary>show</summary>
 <p>
@@ -207,7 +207,7 @@ Follow the steps below to enable secret scanning for an organization:
 </p>
 </details>
 
-### What is the name of the file to list paths/files to exclude from secret scanning ?
+### What is the name of the file to list paths/files to exclude from secret scanning?
 
 <details><summary>show</summary>
 <p>
@@ -227,7 +227,7 @@ paths-ignore:
 
 ## Configure and use dependency management
 
-### What is the name of the dependency scanning feature of GitHub ?
+### What is the name of the dependency scanning feature of GitHub?
 
 <details><summary>show</summary>
 <p>
@@ -237,17 +237,17 @@ Dependency graph (which is different from Dependabot!)
 </p>
 </details>
 
-### Does Dependency graph scan your source code ?
+### Does Dependency graph scan your source code?
 
 <details><summary>show</summary>
 <p>
 
-Not really. It scans the files of your repository and is looking for dependencies/packages files (package.json, package.config, pom.xml, etc) but the code your wrote yourself is not scanned by this tool.
+Not really. It scans the files of your repository and is looking for dependencies/packages files (package.json, package.config, pom.xml, etc.) but the code you wrote yourself is not scanned by this tool.
 
 </p>
 </details>
 
-### What are the dependencies checked by Dependency graph ?
+### What are the dependencies checked by Dependency graph?
 
 <details><summary>show</summary>
 <p>
@@ -259,7 +259,7 @@ Not really. It scans the files of your repository and is looking for dependencie
 </p>
 </details>
 
-### What is the goal of Dependabot ?
+### What is the goal of Dependabot?
 
 <details><summary>show</summary>
 <p>
@@ -269,7 +269,7 @@ Dependabot keeps your dependencies up to date by informing you of any security v
 </p>
 </details>
 
-### What are the supported packages managers (list at least 5) ?
+### What are the supported package managers (list at least 5)?
 
 <details><summary>show</summary>
 <p>
@@ -287,7 +287,7 @@ Dependabot keeps your dependencies up to date by informing you of any security v
 </p>
 </details>
 
-### Where can you find the list of last known vulnerabilities in the world ?
+### Where can you find the list of last known vulnerabilities in the world?
 
 <details><summary>show</summary>
 <p>
@@ -297,17 +297,17 @@ You can use the [GitHub Advisory Database](https://github.com/advisories)
 </p>
 </details>
 
-### Can the contributors of a repository access to Dependabot alerts ?
+### Can the contributors of a repository access Dependabot alerts?
 
 <details><summary>show</summary>
 <p>
 
-No, by default only repo owners and administrators can access them. But administrators and owners can also grant other teams and users with access to the repository, permissions to view and dismiss Dependabot alerts by adding them in **Access to alerts**"** section.
+No, by default only repo owners and administrators can access them. But administrators and owners can also grant other teams and users with access to the repository, permissions to view and dismiss Dependabot alerts by adding them in the **Access to alerts** section.
 
 </p>
 </details>
 
-### Which file allow to configure Dependabot behavior such as interval scanning or version control  ?
+### Which file allows you to configure Dependabot behavior such as interval scanning or version control?
 
 <details><summary>show</summary>
 <p>
@@ -317,7 +317,7 @@ dependabot.yml
 </p>
 </details>
 
-### Which channels can be used for Dependabot notifications ?
+### Which channels can be used for Dependabot notifications?
 
 <details><summary>show</summary>
 <p>
@@ -331,7 +331,7 @@ dependabot.yml
 </p>
 </details>
 
-### How can you retrieve detected vulnerabilities programmatically ?
+### How can you retrieve detected vulnerabilities programmatically?
 
 <details><summary>show</summary>
 <p>
@@ -371,7 +371,7 @@ query {
 
 ## Configure and use code scanning
 
-### What are the supported langages of code scanning ?
+### What are the supported languages of code scanning?
 
 <details><summary>show</summary>
 <p>
@@ -387,7 +387,7 @@ query {
 </p>
 </details>
 
-### Which file format permits to integrate results for a 3rd party scanning tool ?
+### Which file format permits integration of results for a 3rd party scanning tool?
 
 <details><summary>show</summary>
 <p>
@@ -397,7 +397,7 @@ The **SARIF** format (Static Analysis Results Interchange Format)
 </p>
 </details>
 
-### Which GitHub action allow to upload a SARIF file ?
+### Which GitHub action allows you to upload a SARIF file?
 
 <details><summary>show</summary>
 <p>
@@ -415,7 +415,7 @@ The **SARIF** format (Static Analysis Results Interchange Format)
 </p>
 </details>
 
-### What is the difference between dismiss and delete a code scanning alert ?
+### What is the difference between dismissing and deleting a code scanning alert?
 
 <details><summary>show</summary>
 <p>
@@ -440,7 +440,7 @@ When deleting an alert:
 
 ## Use code scanning with CodeQL
 
-### What are the two ways of running CodeQL on GitHub ?
+### What are the two ways of running CodeQL on GitHub?
 
 <details><summary>show</summary>
 <p>
@@ -453,7 +453,7 @@ When deleting an alert:
 
 ## Describe GitHub Advanced Security best practices, results, and how to take corrective measures
 
-### What is the name of the file to declare the security policy of a repository ?
+### What is the name of the file to declare the security policy of a repository?
 
 <details><summary>show</summary>
 <p>
@@ -463,7 +463,7 @@ SECURITY.md
 </p>
 </details>
 
-### Which screen allows you to have a clear vision of all security issues in your organization ?
+### Which screen allows you to have a clear vision of all security issues in your organization?
 
 <details><summary>show</summary>
 <p>
@@ -472,17 +472,17 @@ the **Security Overview** screen.
 </p>
 </details>
 
-### Is security overview available for public repositories ?
+### Is security overview available for public repositories?
 
 <details><summary>show</summary>
 <p>
 
-The Security Overview is only available on private repositories with GitHub Advanced Security
+The Security Overview is only available on private repositories with GitHub Advanced Security.
 
 </p>
 </details>
 
-### How can you give specific rights to GITHUB_TOKEN to automate security workflows ?
+### How can you give specific rights to GITHUB_TOKEN to automate security workflows?
 
 <details><summary>show</summary>
 <p>
@@ -509,7 +509,7 @@ jobs:
 
 ## Configure GitHub Advanced Security tools in GitHub Enterprise
 
-### What are the 3(+1) main features of GitHub Advanced Security ?
+### What are the 3(+1) main features of GitHub Advanced Security?
 
 <details><summary>show</summary>
 <p>
@@ -522,17 +522,17 @@ jobs:
 </p>
 </details>
 
-### What is the pricing model for GitHub Advanced Security ?
+### What is the pricing model for GitHub Advanced Security?
 
 <details><summary>show</summary>
 <p>
 
-Your pay one license (seat) for each active commiter in private/internal repositories.
+You pay one license (seat) for each active committer in private/internal repositories.
 
 </p>
 </details>
 
-### How enable GitHub Advanced Security for GitHub Enterprise Server ?
+### How do you enable GitHub Advanced Security for GitHub Enterprise Server?
 
 <details><summary>show</summary>
 <p>
