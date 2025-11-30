@@ -603,3 +603,159 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 
 </p>
 </details>
+
+### What is Enterprise Managed Users (EMU)?
+
+<details><summary>show</summary>
+<p>
+
+Enterprise Managed Users is a deployment option where user accounts are provisioned and managed by the enterprise through an identity provider (IdP). With EMU:
+- Users cannot create their own accounts
+- All authentication goes through the enterprise IdP
+- Users can only contribute to repositories within the enterprise
+- Provides complete lifecycle management of user accounts
+
+</p>
+</details>
+
+### What is the difference between organization secrets and repository secrets?
+
+<details><summary>show</summary>
+<p>
+
+- **Organization secrets**: Shared across multiple repositories in an organization, can be scoped to specific repositories or all repositories
+- **Repository secrets**: Only accessible within a single repository
+
+Organization secrets are useful for credentials that need to be shared, like cloud provider access keys.
+
+</p>
+</details>
+
+### How do you configure IP allow lists for an organization?
+
+<details><summary>show</summary>
+<p>
+
+IP allow lists restrict access to organization resources to specific IP addresses or CIDR ranges:
+
+1. Go to Organization Settings → Security → IP allow list
+2. Add allowed IP addresses or CIDR ranges
+3. Enable the IP allow list
+
+This applies to web, API, and Git access.
+
+</p>
+</details>
+
+### What is a runner group?
+
+<details><summary>show</summary>
+<p>
+
+Runner groups are collections of self-hosted runners that can be shared across an organization. They allow you to:
+- Control which repositories can use specific runners
+- Organize runners by purpose or environment
+- Set access policies at the group level
+
+By default, all runners are added to a default group.
+
+</p>
+</details>
+
+### What are the different types of GitHub Enterprise licenses?
+
+<details><summary>show</summary>
+<p>
+
+- **GitHub Enterprise Cloud**: Hosted by GitHub, includes advanced security features, cloud-based
+- **GitHub Enterprise Server**: Self-hosted on your own infrastructure, runs behind your firewall
+
+Both can be combined for maximum flexibility.
+
+</p>
+</details>
+
+### How do you transfer a repository between organizations?
+
+<details><summary>show</summary>
+<p>
+
+To transfer a repository:
+1. Go to Repository Settings → General
+2. Scroll to "Danger Zone"
+3. Click "Transfer"
+4. Enter the new owner (organization or user)
+5. Confirm the transfer
+
+The repository must not have any outstanding sponsorship or Actions billing.
+
+</p>
+</details>
+
+### What happens to forks when a repository is deleted?
+
+<details><summary>show</summary>
+<p>
+
+When a public repository with forks is deleted:
+- One of the forks becomes the new root repository
+- All other forks remain linked to this new root
+
+When a private repository with forks is deleted:
+- All forks are deleted if the repository network is not preserved
+
+</p>
+</details>
+
+### What is the purpose of a default community health file?
+
+<details><summary>show</summary>
+<p>
+
+Default community health files stored in a `.github` repository apply to all repositories in the organization that don't have their own versions. These include:
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- SECURITY.md
+- SUPPORT.md
+- Issue and PR templates
+- FUNDING.yml
+
+</p>
+</details>
+
+### How do you enforce SAML single sign-on for an organization?
+
+<details><summary>show</summary>
+<p>
+
+To enforce SAML SSO:
+1. Navigate to Organization Settings → Security
+2. Enable SAML single sign-on
+3. Configure your identity provider settings
+4. Test the configuration
+5. Click "Require SAML SSO authentication"
+
+After enforcement, members must authenticate through the IdP to access resources.
+
+</p>
+</details>
+
+### What is the difference between archiving and deleting a repository?
+
+<details><summary>show</summary>
+<p>
+
+**Archiving:**
+- Repository becomes read-only
+- All content is preserved
+- Issues, PRs, and discussions are locked
+- Can be unarchived later
+- Useful for projects no longer actively maintained
+
+**Deleting:**
+- Permanently removes the repository
+- Cannot be undone after grace period
+- Removes all issues, PRs, and history
+
+</p>
+</details>

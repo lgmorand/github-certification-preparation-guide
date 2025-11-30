@@ -517,3 +517,257 @@ jobs:
 
 </p>
 </details>
+
+### How do you set environment variables that are available to all steps in a job?
+
+<details><summary>show</summary>
+<p>
+
+You can set environment variables at the job level using the `env` keyword:
+
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
+      API_URL: https://api.example.com
+    steps:
+      - run: echo $NODE_ENV
+```
+
+</p>
+</details>
+
+### What is the difference between `secrets.GITHUB_TOKEN` and a Personal Access Token?
+
+<details><summary>show</summary>
+<p>
+
+- **GITHUB_TOKEN**: Automatically generated for each workflow run, scoped to the repository, expires when the job completes
+- **Personal Access Token**: Created manually by a user, can have broader permissions, persists until revoked
+
+GITHUB_TOKEN is recommended for most use cases as it follows the principle of least privilege.
+
+</p>
+</details>
+
+### How do you run a workflow on a schedule?
+
+<details><summary>show</summary>
+<p>
+
+Use the `schedule` event with cron syntax:
+
+```yaml
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight every day
+    - cron: '30 8 * * 1-5'  # Runs at 8:30 AM Monday through Friday
+```
+
+Note: Scheduled workflows run on the default branch only.
+
+</p>
+</details>
+
+### What is workflow concurrency and how do you configure it?
+
+<details><summary>show</summary>
+<p>
+
+Concurrency ensures that only a single job or workflow using the same concurrency group will run at a time:
+
+```yaml
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+```
+
+This is useful for deployment workflows where you only want the latest version to be deployed.
+
+</p>
+</details>
+
+### How do you cache dependencies in a workflow?
+
+<details><summary>show</summary>
+<p>
+
+Use the `actions/cache` action:
+
+```yaml
+- uses: actions/cache@v3
+  with:
+    path: ~/.npm
+    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    restore-keys: |
+      ${{ runner.os }}-node-
+```
+
+</p>
+</details>
+
+### What are the status check functions available in workflow expressions?
+
+<details><summary>show</summary>
+<p>
+
+- `success()`: Returns true when all previous steps have succeeded
+- `failure()`: Returns true when any previous step has failed
+- `always()`: Always returns true, even when cancelled
+- `cancelled()`: Returns true when the workflow was cancelled
+
+Example:
+```yaml
+- name: Cleanup on failure
+  if: failure()
+  run: ./cleanup.sh
+```
+
+</p>
+</details>
+
+### How do you create a reusable workflow?
+
+<details><summary>show</summary>
+<p>
+
+Create a workflow with the `workflow_call` trigger:
+
+```yaml
+# .github/workflows/reusable.yml
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying to ${{ inputs.environment }}"
+```
+
+Call it from another workflow:
+```yaml
+jobs:
+  call-workflow:
+    uses: owner/repo/.github/workflows/reusable.yml@main
+    with:
+      environment: production
+    secrets:
+      token: ${{ secrets.DEPLOY_TOKEN }}
+```
+
+</p>
+</details>
+
+### What is the purpose of the `continue-on-error` property?
+
+<details><summary>show</summary>
+<p>
+
+`continue-on-error` allows a job or step to continue even if it fails:
+
+```yaml
+steps:
+  - name: Optional step
+    continue-on-error: true
+    run: ./optional-script.sh
+    
+  - name: This runs even if the previous step failed
+    run: echo "Still running"
+```
+
+</p>
+</details>
+
+### How do you pass data between jobs in a workflow?
+
+<details><summary>show</summary>
+<p>
+
+Use job outputs:
+
+```yaml
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.step1.outputs.version }}
+    steps:
+      - id: step1
+        run: echo "version=1.2.3" >> $GITHUB_OUTPUT
+        
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Version is ${{ needs.job1.outputs.version }}"
+```
+
+</p>
+</details>
+
+### What is a composite action?
+
+<details><summary>show</summary>
+<p>
+
+A composite action combines multiple steps into a single action that can be reused. It's defined in an action.yml file:
+
+```yaml
+name: 'Setup and Test'
+description: 'Setup node and run tests'
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - run: npm ci
+      shell: bash
+    - run: npm test
+      shell: bash
+```
+
+</p>
+</details>
+
+### How do you use service containers in a workflow?
+
+<details><summary>show</summary>
+<p>
+
+Service containers run alongside your job to provide services like databases:
+
+```yaml
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - run: npm test
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
+```
+
+</p>
+</details>

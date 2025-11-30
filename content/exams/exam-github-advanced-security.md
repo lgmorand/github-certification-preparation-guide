@@ -541,3 +541,204 @@ This can be done two ways: via the GitHub user interface or via the administrati
 
 </p>
 </details>
+
+### What is the default CodeQL query suite and what other suites are available?
+
+<details><summary>show</summary>
+<p>
+
+- **default**: The default queries run for a language, balanced between precision and recall
+- **security-extended**: Includes the default suite plus additional security queries with slightly lower precision
+- **security-and-quality**: Includes all security queries plus maintainability and reliability queries
+
+You can specify the suite in your workflow:
+```yaml
+- uses: github/codeql-action/init@v2
+  with:
+    queries: security-extended
+```
+
+</p>
+</details>
+
+### What are the different ways to dismiss a code scanning alert?
+
+<details><summary>show</summary>
+<p>
+
+You can dismiss alerts with the following reasons:
+- **Won't fix**: The alert is accurate but you choose not to address it
+- **False positive**: The alert is not a real issue
+- **Used in tests**: The code is only used in test files
+
+Dismissed alerts don't count toward your security metrics but remain visible for audit purposes.
+
+</p>
+</details>
+
+### How does GitHub determine which commits are analyzed by CodeQL?
+
+<details><summary>show</summary>
+<p>
+
+CodeQL analyzes:
+- The head commit of a push event
+- The merge commit for pull requests (combining base and head)
+- Scheduled scans analyze the default branch
+
+You can configure which branches to scan in your workflow file.
+
+</p>
+</details>
+
+### What is a security advisory and how do you create one?
+
+<details><summary>show</summary>
+<p>
+
+A security advisory is a way to privately discuss and fix a security vulnerability before publicly disclosing it. To create one:
+
+1. Go to Security tab → Security advisories
+2. Click "New draft security advisory"
+3. Fill in vulnerability details (affected products, severity, description)
+4. Request a CVE if applicable
+5. Collaborate on a fix in a private fork
+6. Publish when ready
+
+</p>
+</details>
+
+### What are the severity levels for security alerts?
+
+<details><summary>show</summary>
+<p>
+
+GitHub uses CVSS (Common Vulnerability Scoring System) scores:
+- **Critical**: 9.0 - 10.0
+- **High**: 7.0 - 8.9
+- **Medium**: 4.0 - 6.9
+- **Low**: 0.1 - 3.9
+
+These scores help prioritize which vulnerabilities to address first.
+
+</p>
+</details>
+
+### How do you configure Dependabot to check for updates weekly?
+
+<details><summary>show</summary>
+<p>
+
+Create or edit the `.github/dependabot.yml` file:
+
+```yaml
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/New_York"
+```
+
+</p>
+</details>
+
+### What is the GitHub Advisory Database?
+
+<details><summary>show</summary>
+<p>
+
+The GitHub Advisory Database is a free, curated database of security vulnerabilities in open source software. It contains:
+- CVE data from the National Vulnerability Database
+- Security advisories published on GitHub
+- npm, PyPI, RubyGems, and other ecosystem advisories
+- Community-contributed advisories
+
+Advisories are reviewed by GitHub and assigned CVSS scores.
+
+</p>
+</details>
+
+### How do you configure code scanning to use a custom CodeQL config file?
+
+<details><summary>show</summary>
+<p>
+
+Create a CodeQL config file (e.g., `.github/codeql/codeql-config.yml`):
+
+```yaml
+name: "Custom CodeQL Config"
+queries:
+  - uses: security-extended
+  - uses: ./my-custom-queries
+paths:
+  - src
+paths-ignore:
+  - tests
+  - vendor
+```
+
+Reference it in your workflow:
+```yaml
+- uses: github/codeql-action/init@v2
+  with:
+    config-file: ./.github/codeql/codeql-config.yml
+```
+
+</p>
+</details>
+
+### What happens when a user bypasses push protection for a secret?
+
+<details><summary>show</summary>
+<p>
+
+When a user bypasses push protection:
+1. The commit is pushed to the repository
+2. A secret scanning alert is created
+3. An entry is added to the audit log
+4. An email notification is sent to organization owners and security managers
+5. The bypass reason is recorded (false positive, used in tests, will fix later)
+
+</p>
+</details>
+
+### How do you enable secret scanning for an entire organization?
+
+<details><summary>show</summary>
+<p>
+
+1. Navigate to Organization Settings
+2. Go to Security → Code security and analysis
+3. Click "Enable all" next to GitHub Advanced Security
+4. Click "Enable all" next to Secret scanning
+5. Optionally enable push protection
+
+You can also configure this via the API for automation.
+
+</p>
+</details>
+
+### What is dependency review and when does it run?
+
+<details><summary>show</summary>
+<p>
+
+Dependency review analyzes dependency changes in pull requests and shows:
+- Which dependencies are added, removed, or updated
+- Known vulnerabilities in new or updated dependencies
+- License information
+
+It runs automatically on pull requests and can be enforced with the dependency-review-action:
+
+```yaml
+- uses: actions/dependency-review-action@v3
+  with:
+    fail-on-severity: moderate
+```
+
+</p>
+</details>
